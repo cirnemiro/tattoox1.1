@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tattoox</title>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FIREBASE SCRIPTS -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <!-- manualy imported -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <!-- STORAGE -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+    <!-- links CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- SCRIPTS -->
+    <script defer type="module" src="assets/scripts/firebase.js"></script>
+    <script defer type="module" src="assets/scripts/main.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <!-- NAV-MOBILE -->  
+        <nav class="header__nav-mobile">
+            <!-- NAV-BAR -->
+            <div class="header_nav-mobile__bar">
+                <!-- NAV-BAR-HAMBURGER-SVG -->
+                <div class="header_nav-mobile_bar__hamburger">
+                    <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0.5" y1="0.5" x2="19.5" y2="0.5" stroke="white" stroke-linecap="round"/>
+                        <line x1="0.5" y1="5.5" x2="19.5" y2="5.5" stroke="white" stroke-linecap="round"/>
+                        <line x1="0.5" y1="10.5" x2="19.5" y2="10.5" stroke="white" stroke-linecap="round"/>
+                    </svg>
+                </div>             
+            </div>
+           
+            <!-- NAV-CONTENT -->
+            <div class="header_nav-mobile__content hidden">
+                <!-- NAV-CLOSE-SVG -->
+                <div class="header_nav-mobile_content__close">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1" y1="14.435" x2="14.435" y2="0.999954" stroke="white" stroke-linecap="round"/>
+                        <line x1="14.435" y1="14.1421" x2="0.999954" y2="0.707061" stroke="white" stroke-linecap="round"/>
+                    </svg>  
+                </div>        
+                <!-- NAV-LIST -->
+                <ul class="hedaer_nav-mobile_content__list">
+                    <li class="home">Home</li>
+                    <li class="tatuajes">Tatuajes</li>
+                    <li class="tatuadores">Tatuadores</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- LANDING-PAGE-MOBILE -->
+        <section class="landingPage-mobile">
+            <article class="landingPage-mobile__portada">
+                <h3 class="landingPage-mobile_portada__title">Aquí encontraras tu próximo tatuaje</h3>
+                <button class="landingPage-mobile_portada__button">VER TATUAJES</button>
+            </article>
+            <!-- LANDING-PAGE-ESTILOS -->
+            <article class="landingPage__estilos">
+                <h3 class="landingPage_estilos__title">Explora y encuentra tu próximo tatuaje</h3>
+                <div class="landingPage__estilos">
+                    <div class="landingPage_estilos__carousel">
+                        <div class="landingPage_estilos_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>estilo</p>
+                        </div>
+                        <div class="landingPage_estilos_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>estilo</p>
+                        </div>
+                        <div class="landingPage_estilos_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>estilo</p>
+                        </div>
+                        <div class="landingPage_estilos_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>estilo</p>
+                        </div>
+                        <div class="landingPage_estilos_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>estilo</p>
+                        </div>
+                        <div class="landingPage_estilos_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>estilo</p>
+                        </div>                    
+                    </div>                    
+                </div>
+            </article>
+            <!-- LANDING-PAGE-TATUADORES -->
+            <article class="landingPage__tatuadores">
+                <h3 class="landingPage_tatuadores__title">descubre nuestros tatuadores y reserva sesiones</h3>
+                <div class="landingPage__tatuadores">
+                    <div class="landingPage_tatuadores__carousel">
+                        <div class="landingPage_tatuadores_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>tatuador</p>
+                        </div>
+                        <div class="landingPage_tatuadores_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>tatuador</p>
+                        </div>
+                        <div class="landingPage_tatuadores_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>tatuador</p>
+                        </div>
+                        <div class="landingPage_tatuadores_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>tatuador</p>
+                        </div>
+                        <div class="landingPage_tatuadores_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>tatuador</p>
+                        </div>
+                        <div class="landingPage_tatuadores_carousel__element">
+                            <img src="assets/img/estilo1.png" alt="">
+                            <p>tatuador</p>
+                        </div>                    
+                    </div>                    
+                </div>
+            </article>
+        </section>
+        <section class="galery">
+            <article class="galery__grid">
+                
+            </article>
+        </section>
+        <section class="modalGalery">
+
+        </section>
+    </main>
+</body>
+</html>

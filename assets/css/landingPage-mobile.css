@@ -1,0 +1,89 @@
+/* LANDINGPAGE-PORTADA */
+.landingPage-mobile__portada{
+    background-image: url('../img/landingPagePortada.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 162px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+.landingPage-mobile_portada__title{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+}
+.landingPage-mobile_portada__button{
+    width: 122px;
+    height: 32px;
+    border: 0 ;
+    background: #FFFFFF;
+    border-radius: 100px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #984745;
+}
+/* LANDINGPAGE-ESTILOS */
+.landingPage__estilos{
+    padding-top: 20px;
+}
+.landingPage_estilos__title{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    width: 93%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.landingPage_estilos__carousel{
+    overflow-x: scroll;
+    display: flex;
+    height: 200px;
+}
+.landingPage_estilos_carousel__element{
+    min-width: 160px;
+    height: 160px;
+    background-color: blue;
+    margin-left: 10px;
+}
+.landingPage_estilos_carousel__element img{
+    border-radius: 10px;
+    width: 100%;
+}
+/* LANDINGPAGE-tatuadores */
+.landingPage__tatuadores{
+    padding-top: 20px;
+}
+.landingPage_tatuadores__title{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    width: 94%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.landingPage_tatuadores__carousel{
+    overflow-x: scroll;
+    display: flex;
+    height: 200px;
+}
+.landingPage_tatuadores_carousel__element{
+    min-width: 160px;
+    height: 160px;
+    background-color: blue;
+    margin-left: 10px;
+}
+.landingPage_tatuadores_carousel__element img{
+    border-radius: 10px;
+    width: 100%;
+   
+}

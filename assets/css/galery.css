@@ -1,0 +1,16 @@
+.galery{
+    padding: 20px 10px;
+}
+.galery__grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    
+}
+.galery_grid__element{
+    border-radius: 4px;
+    height: 165px;
+    background-image: url('../img/landingPagePortada.png');
+    background-size: cover;
+    background-position: center;
+}

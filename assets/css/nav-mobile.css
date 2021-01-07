@@ -1,0 +1,40 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+/* NAV MOBILE HAMBURGER */
+.header_nav-mobile__bar{
+    background-color: #984745 ;
+    height: 50px ; 
+}
+.header_nav-mobile_bar__hamburger{
+   position: absolute;
+   left: 20px;
+   top: 15px;
+}
+/* NAV MOBILE CONTENT */
+.header_nav-mobile__content{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #984745 ;
+    top: 0;
+    
+}
+.header_nav-mobile_content__close{
+    padding-top: 17px;
+    padding-left: 26px;
+}
+.hedaer_nav-mobile_content__list{
+    color: white;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 120px ;
+}
+.hedaer_nav-mobile_content__list li{
+    margin-bottom: 20px;
+}
