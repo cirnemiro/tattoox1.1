@@ -1,4 +1,6 @@
-import { printGalery } from './galery/galery.js'
+import { status } from './state.js'
+import { initialize } from './main.js'
+
 
 var firebaseConfig = {
     apiKey: "AIzaSyDp-Y6PRIaTRkc3pX2W_pJB4zw6U2JlEVs",
@@ -15,15 +17,29 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const db = firebase.firestore()
-
 const getTatuadores = ()=> db.collection('Tatuadores').get()
+
+export let allInkers = []
 
 export const getAllInkers = async() =>{
     const querySnapshot = await getTatuadores()
-    let inkers = []
     querySnapshot.forEach(e=>{
-        inkers.push(e.data())
+        allInkers.push(e.data())
+        
+        status.state = true
     })
-    return inkers
+    
 }
+getAllInkers()
+
+const initCounter = ()=>{
+    console.log(status);
+    if (status.state) {
+        clearInterval(interval)
+        initialize()
+    }
+}
+let interval = setInterval(initCounter,100)
+
+
 
