@@ -37,6 +37,8 @@
     font-weight: 600;
     font-size: 12px;
     color: #DF7164;
+    display: inline-block;
+    margin-right: 10px;
 }
 /* MODALGALERY BUTTON RESERVA-SESION */
 .modalGalery__btn{
