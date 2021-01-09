@@ -3,7 +3,7 @@ import { filterImg } from '../filter/filter.js'
 
 
 export const printGalery = ()=>{
-    const arrayImagenes = filterImg()
+    const arrayImagenes = filterImg().allImages
     const $gridContainer = document.querySelector('.galery__grid')
     $gridContainer.innerHTML=''
     
@@ -20,5 +20,7 @@ export const printGalery = ()=>{
     })
 }
 export const modalGaleryData =(e)=>{
-    modalGalery(e.target.dataset)
+    let data = e.target.dataset
+    let allInkers = filterImg().allInkers
+    modalGalery(data,allInkers)
 }

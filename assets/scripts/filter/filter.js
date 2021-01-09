@@ -10,5 +10,5 @@ export const filterImg = ()=>{
             
         })
     })
-    return allImages
+    return {allImages,allInkers}
 }
