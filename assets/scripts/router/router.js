@@ -23,6 +23,7 @@ export const galery = ()=>{
     printGalery(filterImg())  
 }
 export const modalGalery  = (data,allInkers)=>{
+    console.log('modalGalery');  
     $MG.classList.remove('hidden')
     $LP.classList.add('hidden')
     $G.classList.add('hidden')

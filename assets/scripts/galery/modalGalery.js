@@ -7,9 +7,16 @@ export const printDataModalGalery = (data)=>{
     const $modalGaleryPhoto = document.querySelector('.modalGalery__photo')
     const $modalTitle = document.querySelector('.modalGalery_header__title')
     const $modalTags = document.querySelector('.modalGalery__tags')
-    const tags = data.tags.split(',')
 
-    console.log(data);
+    let tags = ''
+    
+
+    if (typeof data.tags == 'string') {
+        
+        tags = data.tags.split(',')
+    }else{
+        tags = data.tags
+    }
 
     $modalGaleryPhoto.style.backgroundImage=`url('${data.url}')`
     $modalTitle.innerHTML=data.name
@@ -44,16 +51,16 @@ export const printDataModalGaleryGrid = (data,allInkers)=>{
     const $gridContainer = document.querySelector('.modalGalery_galery__grid')
     $gridContainer.innerHTML=''
     photosOfInker.img.forEach(e => {
-        console.log(e);
-        console.log(data.name);
         const $gridContainerElement = document.createElement('div')
         $gridContainerElement.classList.add('modalGalery_galery_grid__element')
         $gridContainerElement.style.backgroundImage=`url('${e.url}')`
-        $gridContainerElement.dataset.url = e.url
-        $gridContainerElement.dataset.tags = e.tags
-        $gridContainerElement.dataset.name = data.name
         $gridContainer.appendChild($gridContainerElement)
         $gridContainerElement.addEventListener('click',()=>{
+            data = {
+                url: e.url,
+                name: data.name,
+                tags: e.tags
+            }
             printDataModalGalery(data)
         })
     });
