@@ -1,4 +1,4 @@
-import { galery } from "../router/router.js"
+import { contactForm, galery } from "../router/router.js"
 
 
 export const printDataModalGalery = (data)=>{
@@ -7,6 +7,7 @@ export const printDataModalGalery = (data)=>{
     const $modalGaleryPhoto = document.querySelector('.modalGalery__photo')
     const $modalTitle = document.querySelector('.modalGalery_header__title')
     const $modalTags = document.querySelector('.modalGalery__tags')
+    const $modalBtn = document.querySelector('.modalGalery_btn__element')
 
     let tags = ''
 
@@ -36,10 +37,18 @@ export const printDataModalGalery = (data)=>{
         galery()
     })
 
+    $modalBtn.addEventListener('click', ()=>{
+        const $navMobileArrowForm = document.querySelector('.header_nav-mobile_bar__arrowForm')
+        $navMobileArrowForm.classList.remove('hidden')
+        $navMobileArrow.classList.add('hidden')
+        console.log('button');
+        contactForm()
+    })
+
 }
 export const printDataModalGaleryGrid = (data,allInkers)=>{
     let photosOfInker = {}
-    
+
     allInkers.forEach((e,i,a) => {
         if (e.profile.name === data.name) {
             photosOfInker = a[i]

@@ -4,9 +4,7 @@ import { initial,galery } from './router/router.js'
 
 export const initialize = ()=>{
         header()
-        initial()
-        galery()
-        
+        initial()        
 }
 
     

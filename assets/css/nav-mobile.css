@@ -18,6 +18,11 @@
    left: 20px;
    top: 15px;
 }
+.header_nav-mobile_bar__arrowForm{
+    position: absolute;
+   left: 20px;
+   top: 15px;
+}
 /* NAV MOBILE CONTENT */
 .header_nav-mobile__content{
     position: absolute;
