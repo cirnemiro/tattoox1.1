@@ -9,10 +9,8 @@ export const printDataModalGalery = (data)=>{
     const $modalTags = document.querySelector('.modalGalery__tags')
 
     let tags = ''
-    
 
-    if (typeof data.tags == 'string') {
-        
+    if (typeof data.tags == 'string') { 
         tags = data.tags.split(',')
     }else{
         tags = data.tags
@@ -20,8 +18,8 @@ export const printDataModalGalery = (data)=>{
 
     $modalGaleryPhoto.style.backgroundImage=`url('${data.url}')`
     $modalTitle.innerHTML=data.name
-
     $modalTags.innerHTML=''
+
     tags.forEach(tag => {
         const p = document.createElement('p')
         p.classList.add('modalGalery_tags_element')
@@ -40,8 +38,8 @@ export const printDataModalGalery = (data)=>{
 
 }
 export const printDataModalGaleryGrid = (data,allInkers)=>{
-    
     let photosOfInker = {}
+    
     allInkers.forEach((e,i,a) => {
         if (e.profile.name === data.name) {
             photosOfInker = a[i]
