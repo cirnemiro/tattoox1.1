@@ -7,12 +7,15 @@ const $modalGaleryPhoto = document.querySelector('.modalGalery__photo')
 const $modalTitle = document.querySelector('.modalGalery_header__title')
 const $modalTags = document.querySelector('.modalGalery__tags')
 
+let contactFormData = ''
+
 function modalBtn(){
     const $navMobileArrowForm = document.querySelector('.header_nav-mobile_bar__arrowForm')
     $navMobileArrowForm.classList.remove('hidden')
     $navMobileArrow.classList.add('hidden')
     console.log('button');
-    contactForm()
+    console.log(contactFormData);
+    contactForm(contactFormData)
 }
 function navMobileArrow(){
     $navMobileHamburger.classList.remove('hidden')
@@ -45,8 +48,9 @@ export const printDataModalGalery = (data)=>{
 
     $navMobileArrow.addEventListener('click',navMobileArrow)
     
-    
     $modalBtn.addEventListener('click',modalBtn)
+
+    contactFormData = data
     
 }
 export const printDataModalGaleryGrid = (data,allInkers)=>{

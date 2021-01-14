@@ -39,10 +39,10 @@ export const modalGalery  = (data,allInkers)=>{
     printDataModalGalery(data)
     printDataModalGaleryGrid(data,allInkers)
 }
-export const contactForm = ()=>{
+export const contactForm = (data)=>{
     console.log('contactForm');
     $CF.classList.remove('hidden')
-    printContactForm()
+    printContactForm(data)
 }
 export const inkers = ()=>{
     console.log('inkers galery');
