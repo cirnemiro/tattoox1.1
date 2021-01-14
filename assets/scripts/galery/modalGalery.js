@@ -1,13 +1,25 @@
 import { contactForm, galery } from "../router/router.js"
 
+const $modalBtn = document.querySelector('.modalGalery_btn__element')
+const $navMobileHamburger = document.querySelector('.header_nav-mobile_bar__hamburger')
+const $navMobileArrow = document.querySelector('.header_nav-mobile_bar__arrow')
+const $modalGaleryPhoto = document.querySelector('.modalGalery__photo')
+const $modalTitle = document.querySelector('.modalGalery_header__title')
+const $modalTags = document.querySelector('.modalGalery__tags')
 
+function modalBtn(){
+    const $navMobileArrowForm = document.querySelector('.header_nav-mobile_bar__arrowForm')
+    $navMobileArrowForm.classList.remove('hidden')
+    $navMobileArrow.classList.add('hidden')
+    console.log('button');
+    contactForm()
+}
+function navMobileArrow(){
+    $navMobileHamburger.classList.remove('hidden')
+    $navMobileArrow.classList.add('hidden')
+    galery()
+}
 export const printDataModalGalery = (data)=>{
-    const $navMobileHamburger = document.querySelector('.header_nav-mobile_bar__hamburger')
-    const $navMobileArrow = document.querySelector('.header_nav-mobile_bar__arrow')
-    const $modalGaleryPhoto = document.querySelector('.modalGalery__photo')
-    const $modalTitle = document.querySelector('.modalGalery_header__title')
-    const $modalTags = document.querySelector('.modalGalery__tags')
-    const $modalBtn = document.querySelector('.modalGalery_btn__element')
 
     let tags = ''
 
@@ -31,20 +43,11 @@ export const printDataModalGalery = (data)=>{
     $navMobileHamburger.classList.add('hidden')
     $navMobileArrow.classList.remove('hidden')
 
-    $navMobileArrow.addEventListener('click',()=>{
-        $navMobileHamburger.classList.remove('hidden')
-        $navMobileArrow.classList.add('hidden')
-        galery()
-    })
-
-    $modalBtn.addEventListener('click', ()=>{
-        const $navMobileArrowForm = document.querySelector('.header_nav-mobile_bar__arrowForm')
-        $navMobileArrowForm.classList.remove('hidden')
-        $navMobileArrow.classList.add('hidden')
-        console.log('button');
-        contactForm()
-    })
-
+    $navMobileArrow.addEventListener('click',navMobileArrow)
+    
+    
+    $modalBtn.addEventListener('click',modalBtn)
+    
 }
 export const printDataModalGaleryGrid = (data,allInkers)=>{
     let photosOfInker = {}
@@ -68,6 +71,8 @@ export const printDataModalGaleryGrid = (data,allInkers)=>{
                 name: data.name,
                 tags: e.tags
             }
+            $modalBtn.removeEventListener('click',modalBtn)
+            $navMobileArrow.removeEventListener('click',navMobileArrow)
             printDataModalGalery(data)
         })
     });

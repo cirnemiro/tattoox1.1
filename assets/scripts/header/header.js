@@ -1,4 +1,4 @@
-import { galery, initial } from '../router/router.js'
+import { galery, initial, inkers } from '../router/router.js'
 
 export const header = ()=>{
     // NAV VISIBILITY
@@ -20,6 +20,11 @@ export const header = ()=>{
     const $navMobileContentGalery = document.querySelector('.tatuajes')
     $navMobileContentGalery.addEventListener('click',()=>{
         galery()        
+        $navMobileContent.classList.add('hidden')
+    })
+    const $navMobileContentInkers = document.querySelector('.tatuadores')
+    $navMobileContentInkers.addEventListener('click',()=>{
+        inkers()        
         $navMobileContent.classList.add('hidden')
     })
 }

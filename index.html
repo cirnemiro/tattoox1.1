@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tattoox</title>
     <!-- FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- FIREBASE SCRIPTS -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-    <!-- manualy imported -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-    https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
-    <!-- STORAGE -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <!-- manualy imported -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+        <!-- STORAGE -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
     <!-- links CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/mediaquerys/mediaquerys.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/mediaquerys/mediaquerys.css">
     <!-- SCRIPTS -->
-    <script defer type="module" src="assets/scripts/firebase.js"></script>
-    <script defer type="module" src="assets/scripts/main.js"></script>
-
+        <script defer type="module" src="assets/scripts/firebase.js"></script>
+        <script defer type="module" src="assets/scripts/main.js"></script>
 </head>
 <body>
     <header class="header">
@@ -177,7 +175,7 @@
             </article>
         </section>
         <!-- CONTACT FORM -->
-        <section class="contactForm">
+        <section class="contactForm hidden">
             <h3 class="contactForm__title">Envíanos tus datos para reservar una sesión!</h3>
             <p class="contactForm__p">El tatuador contactará contigo en menos de 24 horas tras enviar tus datos</p>
             <form action="https://formspree.io/f/xnqolgbb" method="POST">
@@ -186,6 +184,33 @@
                 <input class="contactForm_form__input" placeholder="Correo electrónico" type="email" name="_replyto">
                 <input class="contactForm_form__btn" type="submit" value="ENVIAR DATOS">
               </form>   
+        </section>
+        <!--GALERY INKERS-->
+        <section class="galeryInkers">
+            <h3>Descubre nuevos tatuadores</h3>
+            <article class="galeryInkers__grid">             
+            </article>    
+        </section>
+        <!--INKERS PROFILE-->
+        <section class="inkersProfile">
+            <article class="inkersProfile__header">
+                <div class="inkersProfile_header__info">
+                    <div class="inkersProfile_header_info__photo">
+
+                    </div>
+                    <p class="inkersProfile_header_info__name">
+
+                    </p>
+                    <div class="inkersProfile_header_info__location">
+
+                    </div>
+                </div>
+                <div class="inkersProfile_header__btn">
+                    <button>
+
+                    </button>
+                </div>
+            </article>
         </section>
     </main>
 </body>
