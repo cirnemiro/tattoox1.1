@@ -5,7 +5,6 @@ import { landingPage } from '../landingPage/landingPage.js'
 import { printContactForm } from '../contactForm/contactForm.js'
 import { printInkers } from '../inkers/inkersGalery.js'
 
-
 const $LP = document.querySelector('.landingPage-mobile')
 const $G = document.querySelector('.galery')
 const $MG = document.querySelector('.modalGalery')
