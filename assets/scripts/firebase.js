@@ -17,10 +17,7 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const db = firebase.firestore()
-const getTatuadores = ()=> db.collection('Tatuadores').get(function (){
-    console.log('hola');
-})
-
+const getTatuadores = ()=> db.collection('Tatuadores').get()
 export let allInkers = []
 
 export const getAllInkers = async() =>{
