@@ -1,3 +1,58 @@
+/* galery inkers header */
+.galeryInkres__header{
+    text-align: center;
+}
+.galeryInkers_header__title{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 33px;
+    color: #464646;
+}
+.galeryInkers_header__search{
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: center;
+}
+.galeryInkers_header_search__input{
+    position: relative;
+}
+.galeryInkers_header_search_input__element{
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 6px;
+}
+.galeryInkers_header_search_input__svg{
+    position: absolute;
+    right: 10px;
+    top: 4px;
+}
+
+.galeryInkers_header_search_select__element{
+    border-radius: 20px;
+    padding: 6px;
+    
+}
+/* galeryInkers TAGS */
+.galeryInkers_header__tags{
+    display: flex;
+    margin-bottom: 30px;
+}
+.galeryInkers_header_tags__element{
+    margin-right: 5px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #464646;
+    background-color: rgba(223, 113, 100, 0.2);;
+}
+
+/* grid */
 .galeryInkers{
     padding: 20px 10px;
 }

@@ -1,5 +1,5 @@
 import { printGalery } from '../galery/galery.js'
-import { filterImg } from '../filter/filter.js'
+import { filterImg,filterInkers } from '../filter/filter.js'
 import { printDataModalGalery,printDataModalGaleryGrid } from '../galery/modalGalery.js'
 import { landingPage } from '../landingPage/landingPage.js'
 import { printContactForm } from '../contactForm/contactForm.js'
@@ -51,5 +51,5 @@ export const inkers = ()=>{
     printInkers()
 }
 export const inkersProfile = ()=>{
-    
+    printInkers(filterInkers())
 }
