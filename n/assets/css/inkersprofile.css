@@ -1,0 +1,10 @@
+.inkersProfile__header{
+    display: flex;
+    height: 190px;
+}
+.inkersProfile_header__info{
+    flex: 1;
+}
+.inkersProfile_header__btn{
+    flex: 1;
+}
