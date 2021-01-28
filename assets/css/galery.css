@@ -44,6 +44,8 @@
 .galery_header__tags{
     display: flex;
     margin-bottom: 30px;
+    width: 100%;
+    overflow-y: auto;
 }
 .galery_header_tags__element{
     margin-right: 5px;
@@ -54,7 +56,15 @@
     font-weight: normal;
     font-size: 14px;
     color: #464646;
-    background-color: rgba(223, 113, 100, 0.2);;
+    background-color: rgba(223, 113, 100, 0.2);
+    
+}
+.selected{
+    background-color: rgba(55, 69, 233, 0.2);
+}
+.galery_header_tags_element_title{
+    
+    width: max-content;
 }
 /* GALERY GRID */
 .galery__grid{

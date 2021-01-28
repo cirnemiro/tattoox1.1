@@ -1,13 +1,18 @@
 
 import { galery } from '../router/router.js'
 import { status } from '../state.js'
+import { printGaleryTags } from '../galery/galery.js'
 
 export const landingPage = ()=>{
     const $verTatuajes = document.querySelector('.landingPage-mobile_portada__button')
     $verTatuajes.addEventListener('click', ()=>{
+        status.param = '000000000000'
         galery()
     })
 }
+
+
+// styles listeners
 const $blackWork = document.querySelector('#blackwork')
 const $color = document.querySelector('#color')
 const $fineline = document.querySelector('#fineline')
@@ -21,51 +26,66 @@ const $realismo = document.querySelector('#realismo')
 const $traditional = document.querySelector('#traditional')
 const $watercolor = document.querySelector('#watercolor')
 
-$blackWork.addEventListener('click', ()=>{
+
+export const filterblackwork = ()=>{
     status.param = 'black'
     galery(status.param)  
-})
-$color.addEventListener('click', ()=>{
+    printGaleryTags()
+}
+export const filtercolor = ()=>{
     status.param = 'color'
-    galery(status.param)   
-})
-$fineline.addEventListener('click', ()=>{
+    galery(status.param)  
+    printGaleryTags()
+}
+export const filterfineline = ()=>{
     status.param = 'fineline'
-    galery(status.param)   
-})
-$ilustrativo.addEventListener('click', ()=>{
-    status.param = 'ilustrativo'
-    galery(status.param)   
-})
-$japanese.addEventListener('click', ()=>{
+    galery(status.param)  
+}
+export const filterjapanese = ()=>{
     status.param = 'japanese'
-    galery(status.param)   
-})
-$microrealismo.addEventListener('click', ()=>{
+    galery(status.param)  
+}
+export const filtermicrorealismo = ()=>{
     status.param = 'microrealismo'
-    galery(status.param)   
-})
-$minimalista.addEventListener('click', ()=>{
+    galery(status.param)  
+}
+export const filterilustrativo = ()=>{
+    status.param = 'ilustrativo'
+    galery(status.param)  
+}
+export const filterminimalista = ()=>{
     status.param = 'minimalista'
-    galery(status.param)   
-})
-$neotraditional.addEventListener('click', ()=>{
+    galery(status.param)  
+}
+export const filterneotraditional = ()=>{
     status.param = 'neotraditional'
-    galery(status.param)   
-})
-$oldschool.addEventListener('click', ()=>{
+    galery(status.param)  
+}
+export const filteroldschool = ()=>{
     status.param = 'oldschool'
-    galery(status.param)   
-})
-$realismo.addEventListener('click', ()=>{
+    galery(status.param)  
+}
+export const filterrealismo = ()=>{
     status.param = 'realismo'
-    galery(status.param)   
-})
-$traditional.addEventListener('click', ()=>{
+    galery(status.param)  
+}
+export const filtertraditional = ()=>{
     status.param = 'traditional'
-    galery(status.param)   
-})
-$watercolor.addEventListener('click', ()=>{
+    galery(status.param)  
+}
+export const filterwatercolor = ()=>{
     status.param = 'watercolor'
-    galery(status.param)   
-})
+    galery(status.param)  
+}
+$blackWork.addEventListener('click',filterblackwork)
+$color.addEventListener('click', filtercolor)
+$fineline.addEventListener('click',filterfineline)
+$japanese.addEventListener('click',filterjapanese)
+$microrealismo.addEventListener('click',filtermicrorealismo)
+$ilustrativo.addEventListener('click',filterilustrativo)
+$minimalista.addEventListener('click', filterminimalista)
+$neotraditional.addEventListener('click', filterneotraditional)
+$oldschool.addEventListener('click', filteroldschool)
+$realismo.addEventListener('click', filterrealismo)
+$traditional.addEventListener('click', filtertraditional)
+$watercolor.addEventListener('click', filterwatercolor)

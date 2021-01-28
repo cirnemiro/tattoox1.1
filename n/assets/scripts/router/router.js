@@ -22,14 +22,14 @@ export const initial = ()=>{
     console.log('initial');
     landingPage()
 }
-export const galery = ()=>{
+export const galery = (param)=>{
     $G.classList.remove('hidden')
     $LP.classList.add('hidden')
     $MG.classList.add('hidden')
     $CF.classList.add('hidden')
     $GI.classList.add('hidden')
     console.log('galery');  
-    printGalery(filterImg())  
+    printGalery(filterImg(param))  
 }
 export const modalGalery  = (data,allInkers)=>{
     console.log('modalGalery');  
