@@ -1,4 +1,5 @@
 import { contactForm, galery } from "../router/router.js"
+import { status } from '../state.js'
 
 const $modalBtn = document.querySelector('.modalGalery_btn__element')
 const $navMobileHamburger = document.querySelector('.header_nav-mobile_bar__hamburger')
@@ -20,7 +21,7 @@ function modalBtn(){
 function navMobileArrow(){
     $navMobileHamburger.classList.remove('hidden')
     $navMobileArrow.classList.add('hidden')
-    galery()
+    galery(status.param)
 }
 export const printDataModalGalery = (data)=>{
 

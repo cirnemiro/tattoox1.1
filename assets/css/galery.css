@@ -26,14 +26,15 @@
     border-radius: 20px;
     border: 1px solid black;
     padding: 6px;
+    margin-right: 5px;
 }
 .galery_header_search_input__svg{
     position: absolute;
     right: 10px;
     top: 4px;
+    margin-right: 5px;
 }
-.galery_header_search__select{
-}
+
 .galery_header_search_select__element{
     border-radius: 20px;
     padding: 6px;

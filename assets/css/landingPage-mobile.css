@@ -57,6 +57,18 @@
     border-radius: 10px;
     width: 100%;
 }
+.landingPage_estilos_carousel_element__p{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+}
 /* LANDINGPAGE-tatuadores */
 .landingPage__tatuadores{
     padding-top: 20px;

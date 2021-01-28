@@ -2,12 +2,10 @@ import { modalGalery } from '../router/router.js'
 import { filterImg } from '../filter/filter.js'
 
 
-export const printGalery = ()=>{
-    const arrayImagenes = filterImg().allImages
+export const printGalery = (arrayImagenes)=>{
+    
     const $gridContainer = document.querySelector('.galery__grid')
     $gridContainer.innerHTML=''
-
-
 
     arrayImagenes.forEach( e=>{
         // print each image
@@ -25,4 +23,8 @@ export const modalGaleryData =(e)=>{
     let data = e.target.dataset
     let allInkers = filterImg().allInkers
     modalGalery(data,allInkers)
+}
+
+const printGaleryTags = ()=>{
+    
 }

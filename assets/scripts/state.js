@@ -1,4 +1,11 @@
 export let status = {
     inkersContacted: [],
-    state : false
+    state : false,
+    param : '',
+    tags: [
+        {
+            name: 'Black Work',
+            data: ''
+        }
+    ]
 }
