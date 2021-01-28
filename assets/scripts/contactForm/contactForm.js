@@ -1,3 +1,5 @@
+import { galery } from "../router/router.js"
+
 
 export const printContactForm = (data)=>{
     const $navMobileArrowForm = document.querySelector('.header_nav-mobile_bar__arrowForm')
@@ -6,6 +8,7 @@ export const printContactForm = (data)=>{
     const $contactFormInputData = document.querySelector('.contactForm_form__data')
 
     $contactFormInputData.value = JSON.stringify(data)
+
 
 
     window.scrollTo (0,0)
@@ -18,5 +21,12 @@ export const printContactForm = (data)=>{
         $navMobileArrow.classList.remove('hidden')
         document.getElementsByTagName('body')[0].style.overflow='visible'
        
+    })
+
+
+    const $contactFormBtn = document.querySelector('.contactForm_form__btn')
+
+    $contactFormBtn.addEventListener('click', function(evt){
+        //evt.preventDefault();
     })
 }

@@ -1,15 +1,12 @@
-import { allInkers } from '../firebase.js'
+import { allImages } from '../firebase.js'
 
  
 export const filterImg = ()=>{
-    let allImages = []
-    allInkers.forEach(inker=>{
-        inker.img.forEach(img=>{
-            allImages.push({img,name:inker.profile.name})
-            
-        })
+    let images = []
+    allImages.forEach(e=>{
+        images.push(e)
     })
-    return {allImages,allInkers}
+    return {allImages}
 }
 export const filterInkers = ()=>{
     let allInkers = []

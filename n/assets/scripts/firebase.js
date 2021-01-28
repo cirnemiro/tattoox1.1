@@ -17,7 +17,7 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const db = firebase.firestore()
-const getTatuadores = ()=> db.collection('estilos').get()
+const getTatuadores = ()=> db.collection('Tatuadores').get()
 
 export let allInkers = []
 
@@ -30,8 +30,7 @@ export const getAllInkers = async() =>{
     })
     
 }
-//getAllInkers()
-initialize()
+getAllInkers()
 
 const initCounter = ()=>{
     console.log(status);
@@ -40,7 +39,7 @@ const initCounter = ()=>{
         initialize()
     }
 }
-let interval = setInterval(initCounter,100)
+let interval = setInterval(initCounter,1000)
 
 
 
