@@ -58,14 +58,42 @@
 }
 .galeryInkers__grid{
     display: grid;
+    
     grid-template-columns: auto auto;
     grid-gap: 10px;
     
 }
 .galeryInkers_grid__element{
+    position: relative;
     border-radius: 4px;
     height: 165px;
     background-image: url('../img/landingPagePortada.png');
     background-size: cover;
     background-position: center;
+}
+.galeryInkers_grid_element__name{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 16px 0  7px 0;
+    background-color: #B67042;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    border-radius: 0 0 4px 4px;
+}
+.galeryInkers_grid_element__photo{
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border-radius: 1px solid black;
+    background-image: url('../img/estilo1.png');
+    background-size: cover;
+    background-position: center;
+    bottom: 29px;
+    right: calc(50% - 23px);
 }

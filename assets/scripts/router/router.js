@@ -4,6 +4,7 @@ import { printDataModalGalery,printDataModalGaleryGrid } from '../galery/modalGa
 import { landingPage } from '../landingPage/landingPage.js'
 import { printContactForm } from '../contactForm/contactForm.js'
 import { printInkers } from '../inkers/inkersGalery.js'
+import { printLandingPageInkersCarousel } from '../landingPage/landingPageInkersCarousel.js'
 
 const $LP = document.querySelector('.landingPage-mobile')
 const $G = document.querySelector('.galery')
@@ -21,6 +22,7 @@ export const initial = ()=>{
     $IP.classList.add('hidden')
     console.log('initial');
     landingPage()
+    printLandingPageInkersCarousel()
 }
 export const galery = (param)=>{
     $G.classList.remove('hidden')

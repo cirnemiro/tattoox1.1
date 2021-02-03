@@ -89,12 +89,38 @@
 }
 .landingPage_tatuadores_carousel__element{
     min-width: 160px;
-    height: 160px;
-    background-color: blue;
+    height: 180px;
     margin-left: 10px;
+    background-image: url('../img/landingPagePortada.png');
+    border-radius: 4px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
-.landingPage_tatuadores_carousel__element img{
-    border-radius: 10px;
+.landingPage_tatuadores_carousel_element__name{
+    position: absolute;
+    bottom: 0;
     width: 100%;
-   
+    text-align: center;
+    padding: 16px 0  7px 0;
+    background-color: #B67042;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    border-radius: 0 0 4px 4px;
+
+}
+.landingPage_tatuadores_carousel_element__photo{
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border-radius: 1px solid black;
+    background-image: url('../img/estilo1.png');
+    background-size: cover;
+    background-position: center;
+    bottom: 29px;
+    right: 57px;
 }
