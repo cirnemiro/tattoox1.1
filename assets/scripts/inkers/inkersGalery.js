@@ -1,4 +1,6 @@
 import { allInkers } from '../firebase.js'
+import { inkersProfile } from '../router/router.js'
+import { printInkerProfile } from './inkersProfile.js'
 
 export const printInkers = (arrayFiltered)=>{
 
@@ -8,15 +10,30 @@ export const printInkers = (arrayFiltered)=>{
         allInkers.forEach(e=>{
     
             const container = document.createElement('div')
-            container.innerHTML = `
-            <div class="galeryInkers_grid__element">
-                <div class="galeryInkers_grid_element__name">
-                    ${e.profile.name}
-                </div>
-                <div class="galeryInkers_grid_element__photo">
-                </div>
+            console.log(e.profile.profileWallpaper);
+            const element = document.createElement('div')
+            element.style.backgroundImage = `url(${e.profile.profileWallpaper})`
+            element.classList.add('galeryInkers_grid__element')
+            // container.innerHTML = `
+            // <div class="galeryInkers_grid__element style="backgroundImage=url('${e.profile.profileWallpaper}')">
+            //     <div class="galeryInkers_grid_element__name">
+            //         ${e.profile.name}
+            //     </div>
+            //     <div class="galeryInkers_grid_element__photo" >
+            //     </div>
+            // </div>
+            element.addEventListener('click',()=>{
+                inkersProfile(e.profile.name)
+            })
+            element.innerHTML = `
+            <div class="galeryInkers_grid_element__name">
+                ${e.profile.name}
+            </div>
+            <div class="galeryInkers_grid_element__photo" >
             </div>
             `
+            container.appendChild(element)
+
             $gridContainer.appendChild(container)
         
             // const gridElement = document.createElement('div')

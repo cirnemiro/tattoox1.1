@@ -59,7 +59,7 @@
 .galeryInkers__grid{
     display: grid;
     
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     grid-gap: 10px;
     
 }
@@ -67,7 +67,7 @@
     position: relative;
     border-radius: 4px;
     height: 165px;
-    background-image: url('../img/landingPagePortada.png');
+    /* background-image: url('../img/landingPagePortada.png'); */
     background-size: cover;
     background-position: center;
 }

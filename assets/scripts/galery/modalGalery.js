@@ -1,3 +1,4 @@
+import { allImages } from "../firebase.js"
 import { contactForm, galery } from "../router/router.js"
 import { status } from '../state.js'
 
@@ -24,7 +25,7 @@ function navMobileArrow(){
     galery(status.param)
 }
 export const printDataModalGalery = (data)=>{
-
+    console.log(data);
     let tags = ''
 
     if (typeof data.tags == 'string') { 
@@ -54,18 +55,24 @@ export const printDataModalGalery = (data)=>{
     contactFormData = data
     
 }
-export const printDataModalGaleryGrid = (data,allInkers)=>{
-    let photosOfInker = {}
-
-    allInkers.forEach((e,i,a) => {
-        if (e.profile.name === data.name) {
-            photosOfInker = a[i]
+export const printDataModalGaleryGrid = (data)=>{
+    console.log(data);
+    let photosOfInker = []
+    allImages.forEach((e,i,a) => {
+        // if (e.tatuador === data.name) {
+        //     photosOfInker = a[i]
+        // }
+        if (e.tatuador == data.name) {
+            console.log(e);
+            photosOfInker.push(e)
         }
     });
+    console.log(photosOfInker);
    
     const $gridContainer = document.querySelector('.modalGalery_galery__grid')
     $gridContainer.innerHTML=''
-    photosOfInker.img.forEach(e => {
+    photosOfInker.forEach(e => {
+        console.log('hola');
         const $gridContainerElement = document.createElement('div')
         $gridContainerElement.classList.add('modalGalery_galery_grid__element')
         $gridContainerElement.style.backgroundImage=`url('${e.url}')`
