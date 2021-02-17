@@ -17,30 +17,42 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const db = firebase.firestore()
-const getTatuadores = ()=> db.collection('fotosProd').get()
+const getImages = ()=> db.collection('fotosProd').get()
+const getInkers = ()=> db.collection('tatuadoresProd').get()
 
 
 export let allInkers = []
 export let allImages = []
 
 
-export const getAllImages = async() =>{
-    const querySnapshot = await getTatuadores()
+const getAllImages = async() =>{
+    const querySnapshot = await getImages()
 
     querySnapshot.forEach(e=>{
         allImages.push(e.data())
-        status.state = true
+        status.stateImg = true
     })
     
 }
 
+const getAllInkers = async()=>{
+    const querySnapshot = await getInkers()
+
+    querySnapshot.forEach(e=>{
+        allInkers.push(e.data())
+        status.stateInk = true
+    })
+}
+
 getAllImages()
+getAllInkers()
 
 const initCounter = ()=>{
     console.log(status);
-    if (status.state) {
+    if (status.stateImg && status.stateInk) {
         clearInterval(interval)
         console.log(allImages);
+        console.log(allInkers);
         initialize()
     }
 }

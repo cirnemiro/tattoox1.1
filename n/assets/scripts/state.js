@@ -1,6 +1,7 @@
 export let status = {
     inkersContacted: [],
-    state : false,
+    stateImg : false,
+    stateInk : false,
     param : '000000000000',
     tags: [
         {
