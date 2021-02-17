@@ -29,9 +29,12 @@ export const printInkers = (arrayFiltered)=>{
             <div class="galeryInkers_grid_element__name">
                 ${e.profile.name}
             </div>
-            <div class="galeryInkers_grid_element__photo" >
-            </div>
+            
             `
+            const photo = document.createElement('div')
+            photo.classList.add('galeryInkers_grid_element__photo')
+            photo.style.backgroundImage = `url(${e.profile.profilePhoto})`
+            element.appendChild(photo)
             container.appendChild(element)
 
             $gridContainer.appendChild(container)

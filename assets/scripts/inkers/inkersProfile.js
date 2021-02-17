@@ -3,7 +3,7 @@ import { printDataModalGalery } from "../galery/modalGalery.js";
 import { modalGalery } from "../router/router.js";
 
 export const printInkerProfile = (name)=>{
-    
+    window.scrollTo(0,0)
     console.log(name);
     const $container = document.querySelector('.inkersProfile')
     
@@ -12,7 +12,7 @@ export const printInkerProfile = (name)=>{
             <h3 class="inkersProfile_header__title">
                 ${name}
             </h3>
-            <div class="inkersProfile_header__photo">
+            <div class="inkersProfile_header__photo" >
 
             </div>
         </article>

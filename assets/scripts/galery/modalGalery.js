@@ -1,4 +1,4 @@
-import { allImages } from "../firebase.js"
+import { allImages, allInkers } from "../firebase.js"
 import { contactForm, galery } from "../router/router.js"
 import { status } from '../state.js'
 
@@ -25,6 +25,15 @@ function navMobileArrow(){
     galery(status.param)
 }
 export const printDataModalGalery = (data)=>{
+    allInkers.forEach(e=>{
+        if (e.profile.name == data.name) {
+            const $modalProfilePhoto = document.querySelector('.modalGalery_header__photo')
+            console.log(e);
+            $modalProfilePhoto.style.backgroundImage = `url('${e.profile.profilePhoto}')`
+
+        }
+    })
+    window.scrollTo(0,0)
     console.log(data);
     let tags = ''
 
@@ -63,7 +72,7 @@ export const printDataModalGaleryGrid = (data)=>{
         //     photosOfInker = a[i]
         // }
         if (e.tatuador == data.name) {
-            console.log(e);
+           
             photosOfInker.push(e)
         }
     });
