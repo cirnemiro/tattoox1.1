@@ -1,5 +1,5 @@
 import { allImages, allInkers } from "../firebase.js"
-import { contactForm, galery } from "../router/router.js"
+import { contactForm, galery, inkersProfile } from "../router/router.js"
 import { status } from '../state.js'
 
 const $modalBtn = document.querySelector('.modalGalery_btn__element')
@@ -45,6 +45,9 @@ export const printDataModalGalery = (data)=>{
 
     $modalGaleryPhoto.style.backgroundImage=`url('${data.url}')`
     $modalTitle.innerHTML=data.name
+    $modalTitle.addEventListener('click' , ()=>{
+        inkersProfile(data.name)
+    })
     $modalTags.innerHTML=''
 
     tags.forEach(tag => {

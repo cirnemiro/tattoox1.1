@@ -2,20 +2,28 @@ import { allImages } from '../firebase.js'
 
  
 export const filterImg = (param)=>{
-    if (param) {
+    let regexp = `/(${param})/gi`
+    if (param == 'udnefined' || param == undefined) {
+        let images = []
+        allImages.forEach(e=>{
+            images.push(e)
+        })
+        return allImages
+    }else if(param){
         let allImagesFiltered = []
         console.log(param);
         allImages.forEach(e => {
             e.tags.forEach(element => {
 
-                if (element == param) {
+                if (element.match(eval(regexp))) {
                     allImagesFiltered.push(e)
                 }
             });
         });
         
         return allImagesFiltered
-    }else{
+    }
+    else{
         let images = []
         allImages.forEach(e=>{
             images.push(e)

@@ -122,7 +122,10 @@ export const printGalery = (arrayImagenes)=>{
     }
     
     
-
+    document.querySelector('.galery_header_search_input__svg').addEventListener('click',()=>{
+       console.log(document.querySelector('.galery_header_search_input__element').value);
+       printGalery(filterImg(document.querySelector('.galery_header_search_input__element').value))     
+    })
 }
 export const modalGaleryData =(e)=>{
     let data = e.target.dataset
