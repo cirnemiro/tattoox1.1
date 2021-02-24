@@ -24,6 +24,7 @@ export const printGaleryTags = ()=>{
             `
             div.addEventListener('click', ()=>{
                 status.param = '000000000000'
+                document.querySelector('.galery_header_search_input__element').value = ''
                 galery()
             })
             $container.appendChild(div)
@@ -34,6 +35,7 @@ export const printGaleryTags = ()=>{
                 </div>
             `
             eval(listener)
+           
             $container.appendChild(div)
         }
     });
@@ -42,6 +44,7 @@ export const printGaleryTags = ()=>{
 export const printGalery = (arrayImagenes)=>{
     printGaleryTags()
     let counter = 0
+    console.log('counter ',counter);
     const galery = document.querySelector('.galery')
     const $gridContainer = document.querySelector('.galery__grid')
     $gridContainer.innerHTML=''
@@ -84,24 +87,27 @@ export const printGalery = (arrayImagenes)=>{
             const $body = document.getElementsByName('body')
             // /console.log(window.innerHeight + window.scrollY,'=',galery.offsetHeight);
             if (window.innerHeight + window.scrollY > galery.offsetHeight) {
-            
-                if (counter < 15) {
+                
+                if (counter <= 14) {
                     console.log(`print ${counter}`);
-                eval(`array${counter}`).forEach( e=>{
-                    // print each image
-                    const gridElement = document.createElement('div')
-                    gridElement.style.backgroundImage= `url(${e.url})`
-                    gridElement.classList.add('galery_grid__element')
-                    gridElement.dataset.url = e.url
-                    gridElement.dataset.tags = e.tags
-                    gridElement.dataset.name = e.tatuador
-                    gridElement.addEventListener('click',modalGaleryData)
-                    $gridContainer.appendChild(gridElement)
-                })
-            }
+                    eval(`array${counter}`).forEach( e=>{
+                        // print each image
+                        const gridElement = document.createElement('div')
+                        gridElement.style.backgroundImage= `url(${e.url})`
+                        gridElement.classList.add('galery_grid__element')
+                        gridElement.dataset.url = e.url
+                        gridElement.dataset.tags = e.tags
+                        gridElement.dataset.name = e.tatuador
+                        gridElement.addEventListener('click',modalGaleryData)
+                        $gridContainer.appendChild(gridElement)
+                    })
+             }
             console.log(eval(`array${counter}`).length);
             console.log(counter);
                 counter++
+                // if (counter=15) {
+                //     counter =2
+                // }
             }
             
         }
@@ -122,14 +128,16 @@ export const printGalery = (arrayImagenes)=>{
     }
     
     
-    document.querySelector('.galery_header_search_input__svg').addEventListener('click',()=>{
-       console.log(document.querySelector('.galery_header_search_input__element').value);
-       printGalery(filterImg(document.querySelector('.galery_header_search_input__element').value))     
- 
-    })
+    document.querySelector('.galery_header_search_input__svg').addEventListener('click',inputFilter)
 }
 export const modalGaleryData =(e)=>{
     let data = e.target.dataset
     let allInkers = filterImg().allInkers
     modalGalery(data,allInkers)
+}
+function inputFilter(){
+    console.log(document.querySelector('.galery_header_search_input__element').value);
+       printGalery(filterImg(document.querySelector('.galery_header_search_input__element').value))  
+       status.param =  '000000000000'
+       printGaleryTags()   
 }

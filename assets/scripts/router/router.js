@@ -32,6 +32,7 @@ export const initial = ()=>{
 
 }
 export const galery = (param)=>{
+    document.querySelector('.galery_header_search_input__element').value = ''
     $G.classList.remove('hidden')
     $LP.classList.add('hidden')
     $MG.classList.add('hidden')
