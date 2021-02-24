@@ -48,7 +48,7 @@ export const galery = (param)=>{
             dat: param
         }
     )
-    console.log(status.pagination);
+    
     printGalery(filterImg(param))  
 }
 export const modalGalery  = (data)=>{
@@ -65,7 +65,7 @@ export const modalGalery  = (data)=>{
     // )
     $arrow.classList.remove('hidden')
     $menu.classList.add('hidden')
-    console.log(status.pagination);
+    
     printDataModalGalery(data)
     printDataModalGaleryGrid(data)
 }
@@ -73,15 +73,8 @@ export const contactForm = (data)=>{
     console.log('contactForm');
     $CF.classList.remove('hidden')
     $IP.classList.add('hidden')
-    status.pagination.push(
-        {
-            action: 'contactForm',
-            dat: data
-        }
-    )
     $arrow.classList.remove('hidden')
     $menu.classList.add('hidden')
-    console.log(status.pagination);
     printContactForm(data)
 }
 export const inkers = ()=>{
@@ -96,10 +89,12 @@ export const inkers = ()=>{
             dat: ''
         }
     )
-    console.log(status.pagination);
+   
     printInkers()
 }
 export const inkersProfile = (e)=>{
+    console.log('inker profile');
+   // document.getElementsByTagName('body')[0].style.overflow='default'
     $IP.classList.remove('hidden')
     $LP.classList.add('hidden')
     $MG.classList.add('hidden')
@@ -113,6 +108,6 @@ export const inkersProfile = (e)=>{
     )
     $arrow.classList.add('hidden')
     $menu.classList.remove('hidden')
-    console.log(status.pagination);
+    
     printInkerProfile(e)
 }
