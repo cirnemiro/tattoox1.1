@@ -98,7 +98,9 @@ export const printGalery = (arrayImagenes)=>{
                     gridElement.addEventListener('click',modalGaleryData)
                     $gridContainer.appendChild(gridElement)
                 })
-                }
+            }
+            console.log(eval(`array${counter}`).length);
+            console.log(counter);
                 counter++
             }
             

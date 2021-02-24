@@ -45,16 +45,27 @@ export const printGalery = (arrayImagenes)=>{
     const galery = document.querySelector('.galery')
     const $gridContainer = document.querySelector('.galery__grid')
     $gridContainer.innerHTML=''
-    if (arrayImagenes.length > 50 ) {
+    if (arrayImagenes.length > 60 ) {
         counter=2
         console.log('array larger than 50');
         const length = arrayImagenes.length
-        const partition = length/4
+        const partition = length/14
+        
        
         let array1 = arrayImagenes.slice(0,partition)
         let array2 = arrayImagenes.slice(partition,partition*2)
         let array3 = arrayImagenes.slice(partition*2,partition*3)
-        let array4 = arrayImagenes.slice(partition*3,length)
+        let array4 = arrayImagenes.slice(partition*3,length*4)
+        let array5 = arrayImagenes.slice(partition*4,length*5)
+        let array6 = arrayImagenes.slice(partition*5,length*6)
+        let array7 = arrayImagenes.slice(partition*6,length*7)
+        let array8 = arrayImagenes.slice(partition*7,length*8)
+        let array9 = arrayImagenes.slice(partition*8,length*9)
+        let array10 = arrayImagenes.slice(partition*9,length*10)
+        let array11 = arrayImagenes.slice(partition*10,length*11)
+        let array12 = arrayImagenes.slice(partition*11,length*12)
+        let array13 = arrayImagenes.slice(partition*12,length*13)
+        let array14 = arrayImagenes.slice(partition*14,length)
 
         array1.forEach( e=>{
             // print each image
@@ -68,78 +79,48 @@ export const printGalery = (arrayImagenes)=>{
             $gridContainer.appendChild(gridElement)
         })
     
-    window.onscroll = function () {
-        
-        const $body = document.getElementsByName('body')
-        // /console.log(window.innerHeight + window.scrollY,'=',galery.offsetHeight);
-        if (window.innerHeight + window.scrollY > galery.offsetHeight) {
-        
-            if (counter < 5) {
-                console.log(`print ${counter}`);
-            eval(`array${counter}`).forEach( e=>{
-                // print each image
-                const gridElement = document.createElement('div')
-                gridElement.style.backgroundImage= `url(${e.url})`
-                gridElement.classList.add('galery_grid__element')
-                gridElement.dataset.url = e.url
-                gridElement.dataset.tags = e.tags
-                gridElement.dataset.name = e.tatuador
-                gridElement.addEventListener('click',modalGaleryData)
-                $gridContainer.appendChild(gridElement)
-            })
+        window.onscroll = function () {
+            
+            const $body = document.getElementsByName('body')
+            // /console.log(window.innerHeight + window.scrollY,'=',galery.offsetHeight);
+            if (window.innerHeight + window.scrollY > galery.offsetHeight) {
+            
+                if (counter < 15) {
+                    console.log(`print ${counter}`);
+                eval(`array${counter}`).forEach( e=>{
+                    // print each image
+                    const gridElement = document.createElement('div')
+                    gridElement.style.backgroundImage= `url(${e.url})`
+                    gridElement.classList.add('galery_grid__element')
+                    gridElement.dataset.url = e.url
+                    gridElement.dataset.tags = e.tags
+                    gridElement.dataset.name = e.tatuador
+                    gridElement.addEventListener('click',modalGaleryData)
+                    $gridContainer.appendChild(gridElement)
+                })
+                }
+                counter++
             }
-            counter++
+            
         }
-        
-    }
-        
-        
-        // window.onscroll= function(){
-        //     if (window.scrollY < 100) {
-        //         console.log('first arary');
-        //         array1.forEach( e=>{
-        //             // print each image
-        //             const gridElement = document.createElement('div')
-        //             gridElement.style.backgroundImage= `url(${e.url})`
-        //             gridElement.classList.add('galery_grid__element')
-        //             gridElement.dataset.url = e.url
-        //             gridElement.dataset.tags = e.tags
-        //             gridElement.dataset.name = e.tatuador
-        //             gridElement.addEventListener('click',modalGaleryData)
-        //             $gridContainer.appendChild(gridElement)
-        //         })
-        //     }else if(window.scrollY < 200){
-        //         console.log('second arary');
-        //         array2.forEach( e=>{
-        //             // print each image
-        //             const gridElement = document.createElement('div')
-        //             gridElement.style.backgroundImage= `url(${e.url})`
-        //             gridElement.classList.add('galery_grid__element')
-        //             gridElement.dataset.url = e.url
-        //             gridElement.dataset.tags = e.tags
-        //             gridElement.dataset.name = e.tatuador
-        //             gridElement.addEventListener('click',modalGaleryData)
-        //             $gridContainer.appendChild(gridElement)
-        //         })
-        //     }
-        // }
+    
        
+    }else{
+        arrayImagenes.forEach( e=>{
+            // print each image
+            const gridElement = document.createElement('div')
+            gridElement.style.backgroundImage= `url(${e.url})`
+            gridElement.classList.add('galery_grid__element')
+            gridElement.dataset.url = e.url
+            gridElement.dataset.tags = e.tags
+            gridElement.dataset.name = e.tatuador
+            gridElement.addEventListener('click',modalGaleryData)
+            $gridContainer.appendChild(gridElement)
+        })
     }
-    // slice the array to prevent collapse
-    //arrayImagenes.slice(0,100)
+    
     
 
-    // arrayImagenes.forEach( e=>{
-    //     // print each image
-    //     const gridElement = document.createElement('div')
-    //     gridElement.style.backgroundImage= `url(${e.url})`
-    //     gridElement.classList.add('galery_grid__element')
-    //     gridElement.dataset.url = e.url
-    //     gridElement.dataset.tags = e.tags
-    //     gridElement.dataset.name = e.tatuador
-    //     gridElement.addEventListener('click',modalGaleryData)
-    //     $gridContainer.appendChild(gridElement)
-    // })
 }
 export const modalGaleryData =(e)=>{
     let data = e.target.dataset

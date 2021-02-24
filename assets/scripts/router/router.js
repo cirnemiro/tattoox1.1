@@ -6,6 +6,7 @@ import { printContactForm } from '../contactForm/contactForm.js'
 import { printInkers } from '../inkers/inkersGalery.js'
 import { printLandingPageInkersCarousel } from '../landingPage/landingPageInkersCarousel.js'
 import { printInkerProfile } from '../inkers/inkersProfile.js'
+import { status } from '../state.js'
 
 const $LP = document.querySelector('.landingPage-mobile')
 const $G = document.querySelector('.galery')
@@ -13,6 +14,8 @@ const $MG = document.querySelector('.modalGalery')
 const $CF = document.querySelector('.contactForm')
 const $IP = document.querySelector('.inkersProfile')
 const $GI = document.querySelector('.galeryInkers')
+const $arrow = document.querySelector('.header_nav-mobile_bar__arrow')
+const $menu = document.querySelector('.header_nav-mobile_bar__hamburger')
 
 
 export const initial = ()=>{
@@ -22,10 +25,11 @@ export const initial = ()=>{
     $CF.classList.add('hidden')
     $GI.classList.add('hidden')
     $IP.classList.add('hidden')
-    // $IP.classList.add('hidden')
     console.log('initial');
+    status.pagination = []
     landingPage()
     printLandingPageInkersCarousel()
+
 }
 export const galery = (param)=>{
     $G.classList.remove('hidden')
@@ -35,6 +39,16 @@ export const galery = (param)=>{
     $GI.classList.add('hidden')
     $IP.classList.add('hidden')
     console.log('galery');  
+    $arrow.classList.add('hidden')
+    $menu.classList.remove('hidden')
+    
+    status.pagination.push(
+        {
+            action: 'galery',
+            dat: param
+        }
+    )
+    console.log(status.pagination);
     printGalery(filterImg(param))  
 }
 export const modalGalery  = (data)=>{
@@ -43,6 +57,15 @@ export const modalGalery  = (data)=>{
     $MG.classList.remove('hidden')
     $G.classList.add('hidden')
     $IP.classList.add('hidden')
+    // status.pagination.push(
+    //     {
+    //         action: 'modalGalery',
+    //         dat: data
+    //     }
+    // )
+    $arrow.classList.remove('hidden')
+    $menu.classList.add('hidden')
+    console.log(status.pagination);
     printDataModalGalery(data)
     printDataModalGaleryGrid(data)
 }
@@ -50,6 +73,15 @@ export const contactForm = (data)=>{
     console.log('contactForm');
     $CF.classList.remove('hidden')
     $IP.classList.add('hidden')
+    status.pagination.push(
+        {
+            action: 'contactForm',
+            dat: data
+        }
+    )
+    $arrow.classList.remove('hidden')
+    $menu.classList.add('hidden')
+    console.log(status.pagination);
     printContactForm(data)
 }
 export const inkers = ()=>{
@@ -58,6 +90,13 @@ export const inkers = ()=>{
     $G.classList.add('hidden')
     $GI.classList.remove('hidden')
     $IP.classList.add('hidden')
+    status.pagination.push(
+        {
+            action: 'inkers',
+            dat: ''
+        }
+    )
+    console.log(status.pagination);
     printInkers()
 }
 export const inkersProfile = (e)=>{
@@ -66,5 +105,14 @@ export const inkersProfile = (e)=>{
     $MG.classList.add('hidden')
     $CF.classList.add('hidden')
     $GI.classList.add('hidden')
+    status.pagination.push(
+        {
+            action: 'inkersProfile',
+            dat: e
+        }
+    )
+    $arrow.classList.add('hidden')
+    $menu.classList.remove('hidden')
+    console.log(status.pagination);
     printInkerProfile(e)
 }

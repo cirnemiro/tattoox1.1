@@ -19,11 +19,11 @@ function modalBtn(){
     console.log(contactFormData);
     contactForm(contactFormData)
 }
-function navMobileArrow(){
-    $navMobileHamburger.classList.remove('hidden')
-    $navMobileArrow.classList.add('hidden')
-    galery(status.param)
-}
+// function navMobileArrow(){
+//     $navMobileHamburger.classList.remove('hidden')
+//     $navMobileArrow.classList.add('hidden')
+//     galery(status.param)
+// }
 export const printDataModalGalery = (data)=>{
     allInkers.forEach(e=>{
         if (e.profile.name == data.name) {
@@ -54,10 +54,10 @@ export const printDataModalGalery = (data)=>{
         $modalTags.appendChild(p)
     });
 
-    $navMobileHamburger.classList.add('hidden')
-    $navMobileArrow.classList.remove('hidden')
+    // $navMobileHamburger.classList.add('hidden')
+    // $navMobileArrow.classList.remove('hidden')
 
-    $navMobileArrow.addEventListener('click',navMobileArrow)
+    // $navMobileArrow.addEventListener('click',navMobileArrow)
     
     $modalBtn.addEventListener('click',modalBtn)
 
@@ -65,7 +65,7 @@ export const printDataModalGalery = (data)=>{
     
 }
 export const printDataModalGaleryGrid = (data)=>{
-    console.log(data);
+    //console.log(data);
     let photosOfInker = []
     allImages.forEach((e,i,a) => {
         // if (e.tatuador === data.name) {
@@ -76,12 +76,11 @@ export const printDataModalGaleryGrid = (data)=>{
             photosOfInker.push(e)
         }
     });
-    console.log(photosOfInker);
    
     const $gridContainer = document.querySelector('.modalGalery_galery__grid')
     $gridContainer.innerHTML=''
     photosOfInker.forEach(e => {
-        console.log('hola');
+        
         const $gridContainerElement = document.createElement('div')
         $gridContainerElement.classList.add('modalGalery_galery_grid__element')
         $gridContainerElement.style.backgroundImage=`url('${e.url}')`
@@ -93,7 +92,7 @@ export const printDataModalGaleryGrid = (data)=>{
                 tags: e.tags
             }
             $modalBtn.removeEventListener('click',modalBtn)
-            $navMobileArrow.removeEventListener('click',navMobileArrow)
+            // $navMobileArrow.removeEventListener('click',navMobileArrow)
             printDataModalGalery(data)
         })
     });

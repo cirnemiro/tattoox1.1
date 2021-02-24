@@ -1,4 +1,25 @@
 @import url('./landingPageMQ.css');
 @import url('./galeryMQ.css');
 @import url('./modalGaleryMQ.css');
-@import url('./inkersGaleryMQ.css')
+@import url('./inkersGaleryMQ.css');
+/* width */
+@media only screen and (max-width: 550px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #ffffff00; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: rgba(48, 39, 39, 0); 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(85, 85, 85, 0); 
+      }
+}

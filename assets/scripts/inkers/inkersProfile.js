@@ -1,6 +1,6 @@
 import { allImages, allInkers } from "../firebase.js";
 import { printDataModalGalery } from "../galery/modalGalery.js";
-import { modalGalery } from "../router/router.js";
+import { contactForm, modalGalery } from "../router/router.js";
 
 export const printInkerProfile = (name)=>{
     window.scrollTo(0,0)
@@ -52,5 +52,12 @@ export const printInkerProfile = (name)=>{
                }) 
            }
        })
+
+       const inkersProfileBtn = document.querySelector('.inkersProfile_content__btn')
+       inkersProfileBtn.addEventListener('click',()=>{
+        contactForm(name)
+       })
+
+    
 }
         

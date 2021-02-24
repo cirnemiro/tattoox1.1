@@ -6,7 +6,7 @@ export const printLandingPageInkersCarousel  = ()=>{
     const landingPageTatuadores = document.querySelector('.landingPage_tatuadores__carousel')
     landingPageTatuadores.innerHTML = ''
     allInkers.forEach(e=>{
-        console.log(e);
+        
         const element = document.createElement('div')
         const wallpaperDiv = document.createElement('div')
         const profileDiv = document.createElement('div')
