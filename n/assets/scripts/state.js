@@ -52,5 +52,6 @@ export let status = {
             name: 'Water Color',
             data: 'watercolor'
         },
-    ]
+    ],
+    pagination : []
 }

@@ -1,10 +1,11 @@
 import { allImages, allInkers } from "../firebase.js";
 import { printDataModalGalery } from "../galery/modalGalery.js";
-import { modalGalery } from "../router/router.js";
+import { contactForm, modalGalery } from "../router/router.js";
 
 export const printInkerProfile = (name)=>{
+    document.getElementsByTagName('body')[0].style.overflow='visible'
     window.scrollTo(0,0)
-    console.log(name);
+   
     const $container = document.querySelector('.inkersProfile')
     
     $container.innerHTML = `
@@ -52,5 +53,21 @@ export const printInkerProfile = (name)=>{
                }) 
            }
        })
+
+       const inkersProfileBtn = document.querySelector('.inkersProfile_content__btn')
+       inkersProfileBtn.addEventListener('click',()=>{
+        contactForm(name)
+       })
+       allInkers.forEach(e=>{
+           if (name == e.profile.name) {
+               console.log(name);
+               document.querySelector('.inkersProfile_header__photo').style.backgroundImage = `url(${e.profile.profilePhoto})`
+               document.querySelector('.inkersProfile__header').style.backgroundImage = `url(${e.profile.profileWallpaper})`
+               
+           }
+           
+       })
+
+    
 }
         

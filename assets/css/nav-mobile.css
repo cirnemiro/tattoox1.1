@@ -5,10 +5,11 @@
 }
 /* NAV MOBILE HAMBURGER */
 .header_nav-mobile__bar{
-    background-color: #984745 ;
+    background-color: #F6F6F6 ;
     height: 50px ; 
 }
 .header_nav-mobile_bar__hamburger{
+    color: black;
    position: absolute;
    left: 20px;
    top: 15px;

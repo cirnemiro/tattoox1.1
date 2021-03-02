@@ -16,16 +16,16 @@
   margin-bottom: 10px;
 }
 .landingPage-mobile_portada__button {
-  width: 122px;
-  height: 32px;
+  width: 110px;
+height: 42px;
   border: 0;
-  background: #ffffff;
+  background: linear-gradient(87.74deg, #AD2020 5.63%, #D62828 98.31%);
   border-radius: 100px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  color: #984745;
+  color:white;
 }
 /* LANDINGPAGE-ESTILOS */
 .landingPage__estilos {

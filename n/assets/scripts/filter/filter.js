@@ -1,21 +1,35 @@
 import { allImages } from '../firebase.js'
 
  
-export const filterImg = (param)=>{
-    if (param) {
+export const filterImg = (param,paramInput)=>{
+    let abc = true
+    let regexp = `/(${param})/gi`
+    if (param == 'undefined' || param == undefined) {
+        console.log('es undefined',param);
+        let images = []
+        allImages.forEach(e=>{
+            images.push(e)
+        })
+        return images
+    }else if(param){
         let allImagesFiltered = []
-        console.log(param);
+        console.log('pk conyoo',param);
         allImages.forEach(e => {
+            abc = true
             e.tags.forEach(element => {
 
-                if (element == param) {
-                    allImagesFiltered.push(e)
+                if (element.match(eval(regexp))) {
+                    if (abc) {
+                        allImagesFiltered.push(e)
+                        abc =false
+                    }
                 }
             });
         });
         
         return allImagesFiltered
-    }else{
+    }
+    else{
         let images = []
         allImages.forEach(e=>{
             images.push(e)

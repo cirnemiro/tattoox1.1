@@ -61,25 +61,4 @@ let interval = setInterval(initCounter,1000)
 
 
 
-// export const getAllInkers = async() =>{
-//     const querySnapshot = await getTatuadores()
-//     querySnapshot.forEach(e=>{
-//         allInkers.push(e.data())
-        
-//         status.state = true
-//     })
-    
-// }
-// getAllInkers()
-
-// const initCounter = ()=>{
-//     console.log(status);
-//     if (status.state) {
-//         clearInterval(interval)
-//         initialize()
-//     }
-// }
-// let interval = setInterval(initCounter,1000)
-
-
 
