@@ -1,3 +1,5 @@
+import { sendMail } from "../../api-mail/mail.js"
+import { arrowBack } from "../arrowBack/arrowBack.js"
 import { galery } from "../router/router.js"
 
 
@@ -26,7 +28,9 @@ export const printContactForm = (data)=>{
 
     const $contactFormBtn = document.querySelector('.contactForm_form__btn')
 
-    $contactFormBtn.addEventListener('click', function(evt){
-        //evt.preventDefault();
+    $contactFormBtn.addEventListener('click', ()=>{
+        console.log('pressed send email');
+        sendMail(data)
+        arrowBack()
     })
 }

@@ -135,9 +135,17 @@ export const modalGaleryData =(e)=>{
     let allInkers = filterImg().allInkers
     modalGalery(data,allInkers)
 }
-function inputFilter(){
-    console.log(document.querySelector('.galery_header_search_input__element').value);
-       printGalery(filterImg(document.querySelector('.galery_header_search_input__element').value))  
-       status.param =  '000000000000'
-       printGaleryTags()   
+export function inputFilter(value){
+    if (value) {
+        galery()
+        printGalery(filterImg(value))  
+        status.param =  '000000000000'
+        printGaleryTags() 
+        document.querySelector('.galery_header_search_input__element').value = value 
+    }else{
+        printGalery(filterImg(document.querySelector('.galery_header_search_input__element').value))  
+        status.param =  '000000000000'
+        printGaleryTags()   
+    }
+    
 }
