@@ -1,6 +1,7 @@
 import { allImages, allInkers } from "../firebase.js"
 import { contactForm, galery, inkersProfile } from "../router/router.js"
 import { status } from '../state.js'
+import { inputFilter, tagFilter } from "../galery/galery.js"
 
 const $modalBtn = document.querySelector('.modalGalery_btn__element')
 const $navMobileHamburger = document.querySelector('.header_nav-mobile_bar__hamburger')
@@ -51,10 +52,16 @@ export const printDataModalGalery = (data)=>{
     $modalTags.innerHTML=''
 
     tags.forEach(tag => {
-        const p = document.createElement('p')
-        p.classList.add('modalGalery_tags_element')
-        p.textContent=`#${tag}`
-        $modalTags.appendChild(p)
+        if (tag != '') {
+            const p = document.createElement('p')
+            p.classList.add('modalGalery_tags_element')
+            p.textContent=`${tag}`
+            $modalTags.appendChild(p)
+            p.addEventListener('click',()=>{
+                console.log(tag);
+                tagFilter(tag)
+            })
+        }
     });
 
     // $navMobileHamburger.classList.add('hidden')

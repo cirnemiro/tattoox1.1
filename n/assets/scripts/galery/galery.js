@@ -1,7 +1,7 @@
 import { modalGalery } from '../router/router.js'
 import { filterImg } from '../filter/filter.js'
 import { status } from '../state.js'
-import { filterwatercolor , filterrealismo ,filterneotraditional ,filterminimalista, filterilustrativo , filterjapanese , filtermicrorealismo , filterfineline , filtercolor , filterblackwork , filteroldschool , filtertraditional } from '../landingPage/landingPage.js'
+import { filterwatercolor , filterrealismo,filterpuntillismo ,filterneotradicional ,filterminimalista, filterilustrativo , filterjapanese , filtermicrorealismo , filterfineline , filterblackwork , filteroldschool , filtertradicional } from '../landingPage/landingPage.js'
 import { galery } from '../router/router.js'
 
 
@@ -16,7 +16,7 @@ export const printGaleryTags = ()=>{
         const div = document.createElement('div')
         
         if (e.data.match(eval(regex))) {
-            console.log('match!!');
+            
             div.innerHTML = `
                 <div class="galery_header_tags__element selected">
                     <p class="galery_header_tags_element_title ">${e.name}</p>
@@ -44,7 +44,7 @@ export const printGaleryTags = ()=>{
 export const printGalery = (arrayImagenes)=>{
     printGaleryTags()
     let counter = 0
-    console.log('counter ',counter);
+    
     const galery = document.querySelector('.galery')
     const $gridContainer = document.querySelector('.galery__grid')
     $gridContainer.innerHTML=''
@@ -85,11 +85,11 @@ export const printGalery = (arrayImagenes)=>{
         window.onscroll = function () {
             
             const $body = document.getElementsByName('body')
-            // /console.log(window.innerHeight + window.scrollY,'=',galery.offsetHeight);
+            
             if (window.innerHeight + window.scrollY > galery.offsetHeight) {
                 
                 if (counter <= 14) {
-                    console.log(`print ${counter}`);
+                  
                     eval(`array${counter}`).forEach( e=>{
                         // print each image
                         const gridElement = document.createElement('div')
@@ -101,13 +101,9 @@ export const printGalery = (arrayImagenes)=>{
                         gridElement.addEventListener('click',modalGaleryData)
                         $gridContainer.appendChild(gridElement)
                     })
-             }
-            console.log(eval(`array${counter}`).length);
-            console.log(counter);
+                }
+            
                 counter++
-                // if (counter=15) {
-                //     counter =2
-                // }
             }
             
         }
@@ -127,7 +123,7 @@ export const printGalery = (arrayImagenes)=>{
         })
     }
     
-    
+    document.querySelector('.galery_header_search_input__svg').removeEventListener("click", inputFilter); 
     document.querySelector('.galery_header_search_input__svg').addEventListener('click',inputFilter)
 }
 export const modalGaleryData =(e)=>{
@@ -135,9 +131,21 @@ export const modalGaleryData =(e)=>{
     let allInkers = filterImg().allInkers
     modalGalery(data,allInkers)
 }
-function inputFilter(){
-    console.log(document.querySelector('.galery_header_search_input__element').value);
-       printGalery(filterImg(document.querySelector('.galery_header_search_input__element').value))  
-       status.param =  '000000000000'
-       printGaleryTags()   
+export function inputFilter(){
+   
+        
+        printGalery(filterImg(document.querySelector('.galery_header_search_input__element').value))  
+        status.param =  '000000000000'
+        printGaleryTags()  
+        console.log(document.querySelector('.galery_header_search_input__element').value); 
+    
+    
+}
+export function tagFilter(tag){
+        galery()
+        printGalery(filterImg(tag))  
+        status.param =  '000000000000'
+        printGaleryTags() 
+        document.querySelector('.galery_header_search_input__element').value = tag 
+        console.log('tag',tag);
 }

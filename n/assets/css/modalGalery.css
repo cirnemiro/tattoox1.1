@@ -11,7 +11,7 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  border: 1px solid black;
+
   background-position: center;
   background-size: cover;
 }
@@ -42,7 +42,11 @@
   font-size: 12px;
   color: #df7164;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 4px;
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 4px 7px;
+  margin-top: 3px;
 }
 /* MODALGALERY BUTTON RESERVA-SESION */
 .modalGalery__btn {
@@ -50,21 +54,24 @@
   margin-top: 30px;
 }
 .modalGalery_btn__element {
-  padding: 5px 0;
+  padding: 10px 0;
   width: 194px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+
   text-align: center;
   color: #ffffff;
-  background: #df7164;
+  background: linear-gradient(87.74deg, #ad2020 5.63%, #d62828 98.31%);
   border-radius: 100px;
   border: none;
 }
 /* MODALGALERY GALERY */
 .modalGalery__galery {
-  margin-top: 60px;
+  margin-top: 30px;
   padding: 0 16px 50px 16px;
 }
 .modalGalery_galery__title {

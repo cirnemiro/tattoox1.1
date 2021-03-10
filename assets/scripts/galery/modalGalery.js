@@ -1,7 +1,7 @@
 import { allImages, allInkers } from "../firebase.js"
 import { contactForm, galery, inkersProfile } from "../router/router.js"
 import { status } from '../state.js'
-import { inputFilter } from "../galery/galery.js"
+import { inputFilter, tagFilter } from "../galery/galery.js"
 
 const $modalBtn = document.querySelector('.modalGalery_btn__element')
 const $navMobileHamburger = document.querySelector('.header_nav-mobile_bar__hamburger')
@@ -58,7 +58,8 @@ export const printDataModalGalery = (data)=>{
             p.textContent=`${tag}`
             $modalTags.appendChild(p)
             p.addEventListener('click',()=>{
-                inputFilter(tag)
+                console.log(tag);
+                tagFilter(tag)
             })
         }
     });

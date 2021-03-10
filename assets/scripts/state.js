@@ -9,10 +9,6 @@ export let status = {
             data: 'blackwork'
         },
         {
-            name: 'Color',
-            data: 'color'
-        },
-        {
             name: 'Fine Line',
             data: 'fineline'
         },
@@ -33,25 +29,26 @@ export let status = {
             data: 'minimalista'
         },
         {
-            name: 'Neotraditional',
-            data: 'neotraditional'
+            name: 'Puntillismo',
+            data: 'puntillismo'
         },
         {
-            name: 'OldSchool',
-            data: 'oldschool'
+            name: 'Neotradicional',
+            data: 'neotradicional'
         },
         {
             name: 'Realismo',
             data: 'realismo'
         },
         {
-            name: 'Traditional',
-            data: 'traditional'
+            name: 'Tradicional',
+            data: 'tradicional'
         },
         {
             name: 'Water Color',
             data: 'watercolor'
         },
+        
     ],
     pagination : []
 }

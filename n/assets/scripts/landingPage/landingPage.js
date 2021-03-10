@@ -14,16 +14,16 @@ export const landingPage = ()=>{
 
 // styles listeners
 const $blackWork = document.querySelector('#blackwork')
-const $color = document.querySelector('#color')
+const $puntillismo = document.querySelector('#puntillismo')
 const $fineline = document.querySelector('#fineline')
 const $ilustrativo = document.querySelector('#ilustrativo')
 const $japanese = document.querySelector('#japanese')
 const $microrealismo = document.querySelector('#microrealismo')
 const $minimalista = document.querySelector('#minimalista')
-const $neotraditional = document.querySelector('#neotraditional')
-const $oldschool = document.querySelector('#oldschool')
+const $neotradicional = document.querySelector('#neotradicional')
+
 const $realismo = document.querySelector('#realismo')
-const $traditional = document.querySelector('#traditional')
+const $tradicional = document.querySelector('#tradicional')
 const $watercolor = document.querySelector('#watercolor')
 
 
@@ -32,11 +32,12 @@ export const filterblackwork = ()=>{
     galery(status.param)  
     printGaleryTags()
 }
-export const filtercolor = ()=>{
-    status.param = 'color'
+export const filterpuntillismo = ()=>{
+    status.param = 'puntillismo'
     galery(status.param)  
     printGaleryTags()
 }
+
 export const filterfineline = ()=>{
     status.param = 'fineline'
     galery(status.param)  
@@ -57,8 +58,8 @@ export const filterminimalista = ()=>{
     status.param = 'minimalista'
     galery(status.param)  
 }
-export const filterneotraditional = ()=>{
-    status.param = 'neotraditional'
+export const filterneotradicional = ()=>{
+    status.param = 'neotradicional'
     galery(status.param)  
 }
 export const filteroldschool = ()=>{
@@ -69,8 +70,8 @@ export const filterrealismo = ()=>{
     status.param = 'realismo'
     galery(status.param)  
 }
-export const filtertraditional = ()=>{
-    status.param = 'traditional'
+export const filtertradicional = ()=>{
+    status.param = 'tradicional'
     galery(status.param)  
 }
 export const filterwatercolor = ()=>{
@@ -78,14 +79,14 @@ export const filterwatercolor = ()=>{
     galery(status.param)  
 }
 $blackWork.addEventListener('click',filterblackwork)
-$color.addEventListener('click', filtercolor)
+$puntillismo.addEventListener('click',filterpuntillismo)
 $fineline.addEventListener('click',filterfineline)
 $japanese.addEventListener('click',filterjapanese)
 $microrealismo.addEventListener('click',filtermicrorealismo)
 $ilustrativo.addEventListener('click',filterilustrativo)
 $minimalista.addEventListener('click', filterminimalista)
-$neotraditional.addEventListener('click', filterneotraditional)
-$oldschool.addEventListener('click', filteroldschool)
+$neotradicional.addEventListener('click', filterneotradicional)
+
 $realismo.addEventListener('click', filterrealismo)
-$traditional.addEventListener('click', filtertraditional)
+$tradicional.addEventListener('click', filtertradicional)
 $watercolor.addEventListener('click', filterwatercolor)

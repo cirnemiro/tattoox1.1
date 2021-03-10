@@ -23,6 +23,10 @@
     <!-- SCRIPTS -->
         <script defer type="module" src="assets/scripts/firebase.js"></script>
         <script defer type="module" src="assets/scripts/main.js"></script>
+        <!-- smtpJS server mail -->
+        <script defer src="https://smtpjs.com/v3/smtp.js"></script>        
+        <script defer type="module" src="assets/api-mail/mail.js"></script>
+
 </head>
 <body>
     <header class="header">
@@ -33,23 +37,26 @@
                 <!-- NAV-BAR-HAMBURGER-SVG -->
                 <div class="header_nav-mobile_bar__hamburger">
                     <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="0.5" y1="0.5" x2="19.5" y2="0.5" stroke="white" stroke-linecap="round"/>
-                        <line x1="0.5" y1="5.5" x2="19.5" y2="5.5" stroke="white" stroke-linecap="round"/>
-                        <line x1="0.5" y1="10.5" x2="19.5" y2="10.5" stroke="white" stroke-linecap="round"/>
+                        <line x1="0.5" y1="0.5" x2="19.5" y2="0.5" stroke="black" stroke-linecap="round"/>
+                        <line x1="0.5" y1="5.5" x2="19.5" y2="5.5" stroke="black" stroke-linecap="round"/>
+                        <line x1="0.5" y1="10.5" x2="19.5" y2="10.5" stroke="black" stroke-linecap="round"/>
                     </svg>
                 </div>
                 <div class="header_nav-mobile_bar__arrow hidden">
                     <svg width="27" height="8" viewBox="0 0 27 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35356L3.82843 7.53554C4.02369 7.7308 4.34027 7.7308 4.53553 7.53554C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976313 4.7308 0.65973 4.53553 0.464468C4.34027 0.269206 4.02369 0.269206 3.82843 0.464468L0.646446 3.64645ZM27 3.5L1 3.5L1 4.5L27 4.5L27 3.5Z" fill="white"/>
+                        <path d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35356L3.82843 7.53554C4.02369 7.7308 4.34027 7.7308 4.53553 7.53554C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976313 4.7308 0.65973 4.53553 0.464468C4.34027 0.269206 4.02369 0.269206 3.82843 0.464468L0.646446 3.64645ZM27 3.5L1 3.5L1 4.5L27 4.5L27 3.5Z" fill="black"/>
                     </svg>
                         
                 </div> 
                 <div class="header_nav-mobile_bar__arrowForm hidden">
                     <svg width="27" height="8" viewBox="0 0 27 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35356L3.82843 7.53554C4.02369 7.7308 4.34027 7.7308 4.53553 7.53554C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976313 4.7308 0.65973 4.53553 0.464468C4.34027 0.269206 4.02369 0.269206 3.82843 0.464468L0.646446 3.64645ZM27 3.5L1 3.5L1 4.5L27 4.5L27 3.5Z" fill="white"/>
+                        <path d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35356L3.82843 7.53554C4.02369 7.7308 4.34027 7.7308 4.53553 7.53554C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976313 4.7308 0.65973 4.53553 0.464468C4.34027 0.269206 4.02369 0.269206 3.82843 0.464468L0.646446 3.64645ZM27 3.5L1 3.5L1 4.5L27 4.5L27 3.5Z" fill="black"/>
                     </svg>
                         
-                </div>          
+                </div>   
+                <div class="header_nav-mobile_bar__logo">
+
+                </div>       
             </div>
            
             <!-- NAV-CONTENT -->
@@ -57,8 +64,8 @@
                 <!-- NAV-CLOSE-SVG -->
                 <div class="header_nav-mobile_content__close">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line x1="1" y1="14.435" x2="14.435" y2="0.999954" stroke="white" stroke-linecap="round"/>
-                        <line x1="14.435" y1="14.1421" x2="0.999954" y2="0.707061" stroke="white" stroke-linecap="round"/>
+                        <line x1="1" y1="14.435" x2="14.435" y2="0.999954" stroke="black" stroke-linecap="round"/>
+                        <line x1="14.435" y1="14.1421" x2="0.999954" y2="0.707061" stroke="black" stroke-linecap="round"/>
                     </svg>  
                 </div>        
                 <!-- NAV-LIST -->
@@ -75,7 +82,7 @@
         <section class="landingPage-mobile">
             <article class="landingPage-mobile__portada">
                 <h3 class="landingPage-mobile_portada__title">Aquí encontraras tu próximo tatuaje</h3>
-                <button class="landingPage-mobile_portada__button">VER TATUAJES</button>
+                <button class="landingPage-mobile_portada__button">EXPLORA</button>
             </article>
             <!-- LANDING-PAGE-ESTILOS -->
             <article class="landingPage__estilos">
@@ -86,9 +93,9 @@
                             <img src="assets/img/estilos/blackWork.png" alt="">
                             <p class="landingPage_estilos_carousel_element__p">Black Work</p>
                         </div>
-                        <div id="color" class="landingPage_estilos_carousel__element">
-                            <img src="assets/img/estilos/color.png" alt="">
-                            <p class="landingPage_estilos_carousel_element__p">Color</p>
+                        <div id="puntillismo" class="landingPage_estilos_carousel__element">
+                            <img src="assets/img/estilos/puntillismo.png" alt="">
+                            <p class="landingPage_estilos_carousel_element__p">Puntillismo</p>
                         </div>
                         <div id="fineline" class="landingPage_estilos_carousel__element">
                             <img src="assets/img/estilos/fineLine.png" alt="">
@@ -110,19 +117,15 @@
                             <img src="assets/img/estilos/minimalismo.png" alt="">
                             <p class="landingPage_estilos_carousel_element__p">Minimalismo</p>
                         </div> 
-                        <div id="neotraditional" class="landingPage_estilos_carousel__element">
+                        <div id="neotradicional" class="landingPage_estilos_carousel__element">
                             <img src="assets/img/estilos/neoTraditional.png" alt="">
                             <p  class="landingPage_estilos_carousel_element__p">Neotraditional</p>
-                        </div> 
-                        <div id="oldschool"  class="landingPage_estilos_carousel__element">
-                            <img src="assets/img/estilos/oldschool.png" alt="">
-                            <p class="landingPage_estilos_carousel_element__p">Oldschool</p>
                         </div> 
                         <div id="realismo" class="landingPage_estilos_carousel__element">
                             <img src="assets/img/estilos/realismo.png" alt="">
                             <p class="landingPage_estilos_carousel_element__p">Realismo</p>
                         </div>  
-                        <div id="traditional" class="landingPage_estilos_carousel__element">
+                        <div id="tradicional" class="landingPage_estilos_carousel__element">
                             <img src="assets/img/estilos/traditional.png" alt="">
                             <p class="landingPage_estilos_carousel_element__p">Traditional</p>
                         </div> 
@@ -130,7 +133,14 @@
                             <img src="assets/img/estilos/waterColor.png" alt="">
                             <p class="landingPage_estilos_carousel_element__p">Water Color</p>
                         </div>                 
-                    </div>                    
+                    </div>    
+                    <div class="landingPage_estilos__verTatuajes">
+                        Ver todos los tatuajes
+                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.3536 4.35356C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464468C16.9763 0.269205 16.6597 0.269205 16.4645 0.464468C16.2692 0.65973 16.2692 0.976312 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53554C16.6597 7.7308 16.9763 7.7308 17.1716 7.53554L20.3536 4.35356ZM-4.37114e-08 4.5L20 4.5L20 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="#D62828"/>
+                            </svg>
+                            
+                    </div>                
                 </div>
             </article>
             <!-- LANDING-PAGE-TATUADORES -->
@@ -141,6 +151,13 @@
                                        
                     </div>                    
                 </div>
+                <div class="landingPage_tatuadores__verTatuajes">
+                    Ver todos los tatuadores
+                    <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3536 4.35356C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464468C16.9763 0.269205 16.6597 0.269205 16.4645 0.464468C16.2692 0.65973 16.2692 0.976312 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53554C16.6597 7.7308 16.9763 7.7308 17.1716 7.53554L20.3536 4.35356ZM-4.37114e-08 4.5L20 4.5L20 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="#D62828"/>
+                        </svg>
+                        
+                </div>  
             </article>
         </section>
         <!-- GALERY -->
@@ -199,11 +216,11 @@
         <section class="contactForm hidden">
             <h3 class="contactForm__title">Envíanos tus datos para reservar una sesión!</h3>
             <p class="contactForm__p">El tatuador contactará contigo en menos de 24 horas tras enviar tus datos</p>
-            <form action="assets/api-mail/mail.php" method="POST">
+            <form action="" method="POST">
                 <input class="contactForm_form__input" placeholder="Nombre" type="text" name="name">
                 <input class="contactForm_form__input" placeholder="Telefono" type="phone" name="phone">
                 <input class="contactForm_form__input" placeholder="Correo electrónico" type="email" name="_replyto">
-                <input class="contactForm_form__btn" type="submit" value="ENVIAR DATOS">
+                <input class="contactForm_form__btn"  value="ENVIAR DATOS">
                 <input class="contactForm_form__data" placeholder="data" type="text" name="data">
               </form>   
         </section>

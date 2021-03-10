@@ -27,5 +27,15 @@ export const header = ()=>{
         inkers()        
         $navMobileContent.classList.add('hidden')
     })
+    const $LPverTatuajes = document.querySelector('.landingPage_estilos__verTatuajes')
+    $LPverTatuajes.addEventListener('click',()=>{
+        galery()        
+        $navMobileContent.classList.add('hidden')
+    })
+    const $LPverTatuadores = document.querySelector('.landingPage_tatuadores__verTatuajes')
+    $LPverTatuadores.addEventListener('click',()=>{
+        inkers()        
+        $navMobileContent.classList.add('hidden')
+    })
 }
 

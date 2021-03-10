@@ -5,7 +5,7 @@ export const filterImg = (param,paramInput)=>{
     let abc = true
     let regexp = `/(${param})/gi`
     if (param == 'undefined' || param == undefined) {
-        console.log('es undefined',param);
+        
         let images = []
         allImages.forEach(e=>{
             images.push(e)
@@ -13,7 +13,7 @@ export const filterImg = (param,paramInput)=>{
         return images
     }else if(param){
         let allImagesFiltered = []
-        console.log('pk conyoo',param);
+        
         allImages.forEach(e => {
             abc = true
             e.tags.forEach(element => {
