@@ -28,8 +28,7 @@ export const initialize = ()=>{
                         
                 }
         }
-        console.log(allImages);
-        console.log(allInkers);
+        
         unorderInkers()
         header()
         initial() 

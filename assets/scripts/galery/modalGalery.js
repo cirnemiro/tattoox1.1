@@ -17,7 +17,6 @@ function modalBtn(){
     $navMobileArrowForm.classList.remove('hidden')
     $navMobileArrow.classList.add('hidden')
     console.log('button');
-    console.log(contactFormData);
     contactForm(contactFormData)
 }
 // function navMobileArrow(){
@@ -29,13 +28,12 @@ export const printDataModalGalery = (data)=>{
     allInkers.forEach(e=>{
         if (e.profile.name == data.name) {
             const $modalProfilePhoto = document.querySelector('.modalGalery_header__photo')
-            console.log(e);
+           
             $modalProfilePhoto.style.backgroundImage = `url('${e.profile.profilePhoto}')`
 
         }
     })
     window.scrollTo(0,0)
-    console.log(data);
     let tags = ''
 
     if (typeof data.tags == 'string') { 
@@ -68,7 +66,7 @@ export const printDataModalGalery = (data)=>{
     // $navMobileArrow.classList.remove('hidden')
 
     // $navMobileArrow.addEventListener('click',navMobileArrow)
-    
+    $modalBtn.removeEventListener('click',modalBtn)
     $modalBtn.addEventListener('click',modalBtn)
 
     contactFormData = data

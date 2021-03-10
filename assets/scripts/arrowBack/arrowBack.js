@@ -8,8 +8,6 @@ export const arrowBack = ()=>{
     $arrow.addEventListener('click', ()=>{
         
         let length = status.pagination.length
-        console.log(status.pagination);
-        console.log(status.pagination[length-1]);
         let route = status.pagination[length-1].action+=`('${status.pagination[length-1].dat}')`
         status.pagination.pop()
         console.log(route);
@@ -18,18 +16,17 @@ export const arrowBack = ()=>{
         
         
     })
-    $formBtn.addEventListener('click', ()=>{
+    // $formBtn.removeEventListener('click', formbutton)
+    // function formbutton(){
+    //     const $navMobileArrowForm = document.querySelector('.header_nav-mobile_bar__arrowForm')
+    //     const $navMobileArrow = document.querySelector('.header_nav-mobile_bar__arrow')
+    //     const $contactForm = document.querySelector('.contactForm')
         
-        let length = status.pagination.length
-        console.log(status.pagination);
-        console.log(status.pagination[length-1]);
-        let route = status.pagination[length-1].action+=`('${status.pagination[length-1].dat}')`
-        status.pagination.pop()
-        console.log(route);
-        eval(route)
-        
-        
-        
-    })
+    //     $contactForm.classList.add('hidden')
+    //     $navMobileArrowForm.classList.add('hidden')
+    //     $navMobileArrow.classList.remove('hidden')
+    //     document.getElementsByTagName('body')[0].style.overflow='visible'
+    // }
+    // $formBtn.addEventListener('click', formbutton)
 
 }

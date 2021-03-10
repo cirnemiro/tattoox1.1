@@ -53,7 +53,7 @@ export const galery = (param)=>{
     printGalery(filterImg(param))  
 }
 export const modalGalery  = (data)=>{
-    console.log(data);
+    
     console.log('modalGalery');  
     $MG.classList.remove('hidden')
     $G.classList.add('hidden')
@@ -76,6 +76,7 @@ export const contactForm = (data)=>{
     $IP.classList.add('hidden')
     $arrow.classList.remove('hidden')
     $menu.classList.add('hidden')
+    
     printContactForm(data)
 }
 export const inkers = ()=>{
