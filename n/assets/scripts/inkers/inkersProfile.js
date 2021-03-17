@@ -1,11 +1,10 @@
 import { allImages, allInkers } from "../firebase.js";
 import { printDataModalGalery } from "../galery/modalGalery.js";
 import { contactForm, modalGalery } from "../router/router.js";
-import { status } from "../state.js";
 
 export const printInkerProfile = (name)=>{
     document.getElementsByTagName('body')[0].style.overflow='visible'
-    console.log(status.scrollPatch);
+    window.scrollTo(0,0)
    
     const $container = document.querySelector('.inkersProfile')
     

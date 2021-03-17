@@ -52,7 +52,6 @@ export const printContactForm = (data)=>{
     
             console.log($contactPhone,$contactEmail,$contactName);
             console.log('pressed send email');
-            console.log(data);
             sendMail(data,$contactPhone,$contactEmail,$contactName)
             const $navMobileArrowForm = document.querySelector('.header_nav-mobile_bar__arrowForm')
             const $navMobileArrow = document.querySelector('.header_nav-mobile_bar__arrow')

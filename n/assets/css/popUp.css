@@ -1,0 +1,25 @@
+.popUp{
+    padding: 10px;
+    position: absolute;
+    left: 20%;
+    top: 20px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    z-index: 100;
+    transition: 2s;
+    border-radius: 10px;
+    animation: move 1s ;
+    font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  box-shadow: 2px 2px rgba(248, 67, 67, 0.344);
+  border-color: tomato;
+
+}
+@keyframes move {
+    0%{top: -30px;}
+    100%{top:20px;}
+}

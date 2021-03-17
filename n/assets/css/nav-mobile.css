@@ -1,0 +1,62 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+/* NAV MOBILE HAMBURGER */
+.header_nav-mobile__bar {
+  background-color: #f6f6f6;
+  height: 56px;
+}
+.header_nav-mobile_bar__hamburger {
+  color: black;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+.header_nav-mobile_bar__arrow {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+.header_nav-mobile_bar__arrowForm {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+/* NAV MOBILE CONTENT */
+.header_nav-mobile__content {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(233, 227, 227);
+  top: 0;
+}
+.header_nav-mobile_content__close {
+  padding-top: 17px;
+  padding-left: 26px;
+}
+.hedaer_nav-mobile_content__list {
+  color: black;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 120px;
+}
+.hedaer_nav-mobile_content__list li {
+  margin-bottom: 20px;
+}
+
+.header_nav-mobile_bar__logo {
+  background-image: url("../img/LOGO.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  right: 16px;
+  top: 6px;
+  height: 44px;
+  width: 35px;
+}

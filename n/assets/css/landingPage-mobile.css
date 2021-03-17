@@ -1,0 +1,153 @@
+/* LANDINGPAGE-PORTADA */
+.landingPage-mobile__portada {
+  background-image: url("../img/landingPagePortada.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 162px;
+  text-align: center;
+  padding-top: 20px;
+}
+.landingPage-mobile_portada__title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 10px;
+}
+.landingPage-mobile_portada__button {
+  width: 110px;
+  height: 42px;
+  border: 0;
+  background: linear-gradient(87.74deg, #ad2020 5.63%, #d62828 98.31%);
+  border-radius: 100px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+/* LANDINGPAGE-ESTILOS */
+.landingPage__estilos {
+  padding-top: 20px;
+}
+.landingPage_estilos__title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  width: 93%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.landingPage_estilos__carousel {
+  overflow-x: scroll;
+  display: flex;
+  height: 200px;
+}
+.landingPage_estilos_carousel__element {
+  min-width: 160px;
+  height: 160px;
+  margin-left: 10px;
+}
+.landingPage_estilos_carousel__element img {
+  border-radius: 10px;
+  width: 100%;
+}
+.landingPage_estilos_carousel_element__p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #000000;
+}
+.landingPage_estilos__verTatuajes {
+  text-align: center;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #d62828;
+}
+/* LANDINGPAGE-tatuadores */
+.landingPage__tatuadores {
+  padding-top: 20px;
+}
+.landingPage_tatuadores__title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  width: 94%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.landingPage_tatuadores__carousel {
+  overflow-x: scroll;
+  display: flex;
+  padding-bottom: 10px;
+}
+.landingPage_tatuadores_carousel__element {
+  min-width: 328px;
+  height: 120px;
+  margin-left: 10px;
+  background-image: url("../img/landingPagePortada.png");
+  border-radius: 4px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.landingPage_tatuadores_carousel_element__name {
+  position: absolute;
+
+  width: 100%;
+  text-align: center;
+  padding: 16px 0 7px 0;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px #000000;
+  border-radius: 0 0 4px 4px;
+}
+.landingPage_tatuadores_carousel_element__photo {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border-radius: 1px solid black;
+  /* background-image: url('../img/estilo1.png'); */
+  background-size: cover;
+  background-position: center;
+  bottom: 25px;
+  right: calc(50% - 23px);
+  border: 1px solid white;
+}
+.landingPage_tatuadores__verTatuajes {
+  text-align: center;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #d62828;
+  margin-bottom: 30px;
+}
