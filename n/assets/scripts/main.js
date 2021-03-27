@@ -2,7 +2,8 @@
 import { arrowBack } from './arrowBack/arrowBack.js'
 import { allImages, allInkers } from './firebase.js'
 import { header } from './header/header.js'
-import { initial,galery } from './router/router.js'
+import { initial,galery, scroollCounter } from './router/router.js'
+import { status } from './state.js'
 
 export const initialize = ()=>{
         function unorderImages(){
@@ -28,11 +29,12 @@ export const initialize = ()=>{
                         
                 }
         }
-        
+        document.querySelector('.galery_header_search_input__element').value = status.param
         unorderInkers()
         header()
         initial() 
         arrowBack()   
+        scroollCounter()
 
          
 }

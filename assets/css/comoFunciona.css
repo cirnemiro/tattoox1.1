@@ -1,0 +1,79 @@
+
+main .como-funciona{
+    background-color: rgba(182,112,66,0.4);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 30px;
+    height: 500px;
+}
+main .como-funciona {
+    margin: auto;
+    background-color: rgb(236 236 236 / 40%);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 30px;
+    height: 500px;
+}
+main .como-funciona>h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 33px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #464646;
+    margin-bottom: 18px;
+
+}
+main .como-funciona>.como-funciona-article{
+    display: flex;
+    height: 96px;
+}
+main .como-funciona>.como-funciona-article>div:first-of-type{
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+main .como-funciona>.como-funciona-article>div:first-of-type p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    /* identical to box height */
+    letter-spacing: 0.05em;
+    color: black;
+    margin-bottom: 30px;
+    padding: 0;
+    min-width: 72px;
+    
+}
+main .como-funciona>.como-funciona-article>div:last-of-type{
+    flex: 3;
+    padding-left: 10px;
+}
+main .como-funciona>.como-funciona-article>div:last-of-type p:first-of-type{
+    text-align: start;
+    font-style: normal;
+    font-family: open sans;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.28em;
+    color: #d82823;
+    margin-bottom: 4px;
+}
+main .como-funciona>.como-funciona-article>div:last-of-type p:last-of-type{
+    
+    font-style: normal;
+    font-weight: normal;
+    font-family: open sans;
+    font-size: 16px;
+    line-height: 22px;
+    color: #354153;
+    
+    border-bottom: 1px solid grey;
+
+}

@@ -34,6 +34,12 @@ export const printDataModalGalery = (data)=>{
         }
     })
     window.scrollTo(0,0)
+    window.onscroll = function(){
+        console.log(window.scrollY);
+        if (window.scrollY > 4400) {
+            window.scrollTo(0,4400)
+        }
+    }
     let tags = ''
 
     if (typeof data.tags == 'string') { 
@@ -58,6 +64,8 @@ export const printDataModalGalery = (data)=>{
             p.addEventListener('click',()=>{
                 console.log(tag);
                 tagFilter(tag)
+                status.param = tag
+                window.scrollTo(0,0)
             })
         }
     });
@@ -73,7 +81,8 @@ export const printDataModalGalery = (data)=>{
     
 }
 export const printDataModalGaleryGrid = (data)=>{
-    //console.log(data);
+    console.log(data);
+   
     let photosOfInker = []
     allImages.forEach((e,i,a) => {
         // if (e.tatuador === data.name) {

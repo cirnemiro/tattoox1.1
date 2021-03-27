@@ -16,22 +16,39 @@ const $IP = document.querySelector('.inkersProfile')
 const $GI = document.querySelector('.galeryInkers')
 const $arrow = document.querySelector('.header_nav-mobile_bar__arrow')
 const $menu = document.querySelector('.header_nav-mobile_bar__hamburger')
+const $CFu = document.querySelectorAll('.como-funciona')[0]
+
+
+let scrolling = 0
+
+export const scroollCounter = () => {
+    window.onscroll = () =>{
+        scrolling = window.scrollY
+        console.log(scrolling);
+    }
+}
 
 
 export const initial = ()=>{
+    scroollCounter()
     $LP.classList.remove('hidden')
     $G.classList.add('hidden')
     $MG.classList.add('hidden')
     $CF.classList.add('hidden')
     $GI.classList.add('hidden')
     $IP.classList.add('hidden')
+    $CFu.classList.remove('hidden')
     console.log('initial');
+    window.scrollTo(0,0)
     status.pagination = []
     landingPage()
     printLandingPageInkersCarousel()
 
 }
 export const galery = (param)=>{
+    console.log('scrollpatch',status.scrollPatch);
+    window.scrollTo(0,status.scrollPatch)
+    scroollCounter()
     document.querySelector('.galery_header_search_input__element').value = ''
     $G.classList.remove('hidden')
     $LP.classList.add('hidden')
@@ -39,25 +56,22 @@ export const galery = (param)=>{
     $CF.classList.add('hidden')
     $GI.classList.add('hidden')
     $IP.classList.add('hidden')
+    $CFu.classList.add('hidden')
     console.log('galery');  
     $arrow.classList.add('hidden')
     $menu.classList.remove('hidden')
     
-    status.pagination.push(
-        {
-            action: 'galery',
-            dat: param
-        }
-    )
+   
     
     printGalery(filterImg(param))  
 }
 export const modalGalery  = (data)=>{
-    
+    scroollCounter()
     console.log('modalGalery');  
     $MG.classList.remove('hidden')
     $G.classList.add('hidden')
     $IP.classList.add('hidden')
+    $CFu.classList.add('hidden')
     // status.pagination.push(
     //     {
     //         action: 'modalGalery',
@@ -71,45 +85,55 @@ export const modalGalery  = (data)=>{
     printDataModalGaleryGrid(data)
 }
 export const contactForm = (data)=>{
+    scroollCounter()
     console.log('contactForm');
     $CF.classList.remove('hidden')
-    $IP.classList.add('hidden')
+    // $IP.classList.add('hidden')
     $arrow.classList.remove('hidden')
+    $CFu.classList.add('hidden')
     $menu.classList.add('hidden')
     
     printContactForm(data)
 }
 export const inkers = ()=>{
+    scroollCounter()
     console.log('inkers galery');
     $LP.classList.add('hidden')
     $G.classList.add('hidden')
     $GI.classList.remove('hidden')
+    $CFu.classList.add('hidden')
     $IP.classList.add('hidden')
     status.pagination.push(
         {
             action: 'inkers',
-            dat: ''
+            dat: '',
+            scroll : scrolling
         }
     )
    
     printInkers()
 }
 export const inkersProfile = (e)=>{
+    scroollCounter()
     console.log('inker profile');
    // document.getElementsByTagName('body')[0].style.overflow='default'
     $IP.classList.remove('hidden')
     $LP.classList.add('hidden')
     $MG.classList.add('hidden')
     $CF.classList.add('hidden')
+    $CFu.classList.add('hidden')
     $GI.classList.add('hidden')
+    window.scrollTo(0,0)
     status.pagination.push(
         {
             action: 'inkersProfile',
-            dat: e
+            dat: e,
+            scroll : 0
         }
     )
     $arrow.classList.add('hidden')
     $menu.classList.remove('hidden')
     
     printInkerProfile(e)
+    window.scrollTo(0,0)
 }

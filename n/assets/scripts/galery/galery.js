@@ -4,11 +4,13 @@ import { status } from '../state.js'
 import { filterwatercolor , filterrealismo,filterpuntillismo ,filterneotradicional ,filterminimalista, filterilustrativo , filterjapanese , filtermicrorealismo , filterfineline , filterblackwork , filteroldschool , filtertradicional } from '../landingPage/landingPage.js'
 import { galery } from '../router/router.js'
 
+let scrolling =0 
 
 export const printGaleryTags = ()=>{
+   
     const $container = document.querySelector('.galery_header__tags')
     $container.innerHTML = ''
-    let regex = `/${status.param}/gi`
+    let regex = `/^${status.param}/gi`
 
     status.tags.forEach(e => {
         
@@ -24,8 +26,9 @@ export const printGaleryTags = ()=>{
             `
             div.addEventListener('click', ()=>{
                 status.param = '000000000000'
-                document.querySelector('.galery_header_search_input__element').value = ''
+                document.querySelector('.galery_header_search_input__element').value = status.param
                 galery()
+                // window.scrollTo(0,0)
             })
             $container.appendChild(div)
         }else{
@@ -83,6 +86,9 @@ export const printGalery = (arrayImagenes)=>{
         })
     
         window.onscroll = function () {
+           
+            scrolling = window.scrollY
+            console.log(scrolling);
             
             const $body = document.getElementsByName('body')
             
@@ -125,17 +131,37 @@ export const printGalery = (arrayImagenes)=>{
     
     document.querySelector('.galery_header_search_input__svg').removeEventListener("click", inputFilter); 
     document.querySelector('.galery_header_search_input__svg').addEventListener('click',inputFilter)
+
+    
 }
 export const modalGaleryData =(e)=>{
+
     let data = e.target.dataset
     let allInkers = filterImg().allInkers
+    
+        status.pagination.push(
+            {
+                action: 'galery',
+                dat: status.param,
+                scroll : scrolling
+            }
+        )
+    
+    // status.pagination.push(
+    //     {
+    //         action: 'galery',
+    //         dat: status.param,
+    //         scroll : scrolling
+    //     }
+    // )
+    console.log(status.pagination);
     modalGalery(data,allInkers)
 }
 export function inputFilter(){
    
         
         printGalery(filterImg(document.querySelector('.galery_header_search_input__element').value))  
-        status.param =  '000000000000'
+        status.param =  document.querySelector('.galery_header_search_input__element').value
         printGaleryTags()  
         console.log(document.querySelector('.galery_header_search_input__element').value); 
     

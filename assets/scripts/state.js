@@ -2,7 +2,7 @@ export let status = {
     inkersContacted: [],
     stateImg : false,
     stateInk : false,
-    param : '',
+    param : false,
     tags: [
         {
             name: 'Black Work',

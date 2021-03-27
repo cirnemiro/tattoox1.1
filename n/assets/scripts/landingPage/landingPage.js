@@ -31,52 +31,65 @@ export const filterblackwork = ()=>{
     status.param = 'black'
     galery(status.param)  
     printGaleryTags()
+    window.scrollTo(0,0)
 }
 export const filterpuntillismo = ()=>{
     status.param = 'puntillismo'
     galery(status.param)  
     printGaleryTags()
+    window.scrollTo(0,0)
 }
 
 export const filterfineline = ()=>{
     status.param = 'fineline'
     galery(status.param)  
+    window.scrollTo(0,0)
 }
 export const filterjapanese = ()=>{
     status.param = 'japanese'
     galery(status.param)  
+    window.scrollTo(0,0)
 }
 export const filtermicrorealismo = ()=>{
     status.param = 'microrealismo'
     galery(status.param)  
+    window.scrollTo(0,0)
 }
 export const filterilustrativo = ()=>{
     status.param = 'ilustrativo'
     galery(status.param)  
+    window.scrollTo(0,0)
+    
 }
 export const filterminimalista = ()=>{
     status.param = 'minimalista'
     galery(status.param)  
+    window.scrollTo(0,0)
 }
 export const filterneotradicional = ()=>{
     status.param = 'neotradicional'
     galery(status.param)  
+    window.scrollTo(0,0)
 }
 export const filteroldschool = ()=>{
     status.param = 'oldschool'
     galery(status.param)  
+    window.scrollTo(0,0)
 }
 export const filterrealismo = ()=>{
     status.param = 'realismo'
     galery(status.param)  
+    window.scrollTo(0,0)
 }
 export const filtertradicional = ()=>{
     status.param = 'tradicional'
     galery(status.param)  
+    window.scrollTo(0,0)
 }
 export const filterwatercolor = ()=>{
     status.param = 'watercolor'
     galery(status.param)  
+    window.scrollTo(0,0)
 }
 $blackWork.addEventListener('click',filterblackwork)
 $puntillismo.addEventListener('click',filterpuntillismo)

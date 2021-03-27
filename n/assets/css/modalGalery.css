@@ -1,6 +1,7 @@
 /* MODALGALERY HEADER */
 .modalGalery {
   z-index: 0;
+  height: 1000000px;
 }
 .modalGalery__header {
   display: flex;

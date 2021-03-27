@@ -16,6 +16,7 @@ const $IP = document.querySelector('.inkersProfile')
 const $GI = document.querySelector('.galeryInkers')
 const $arrow = document.querySelector('.header_nav-mobile_bar__arrow')
 const $menu = document.querySelector('.header_nav-mobile_bar__hamburger')
+const $CFu = document.querySelectorAll('.como-funciona')[0]
 
 
 let scrolling = 0
@@ -36,7 +37,9 @@ export const initial = ()=>{
     $CF.classList.add('hidden')
     $GI.classList.add('hidden')
     $IP.classList.add('hidden')
+    $CFu.classList.remove('hidden')
     console.log('initial');
+    window.scrollTo(0,0)
     status.pagination = []
     landingPage()
     printLandingPageInkersCarousel()
@@ -53,6 +56,7 @@ export const galery = (param)=>{
     $CF.classList.add('hidden')
     $GI.classList.add('hidden')
     $IP.classList.add('hidden')
+    $CFu.classList.add('hidden')
     console.log('galery');  
     $arrow.classList.add('hidden')
     $menu.classList.remove('hidden')
@@ -67,6 +71,7 @@ export const modalGalery  = (data)=>{
     $MG.classList.remove('hidden')
     $G.classList.add('hidden')
     $IP.classList.add('hidden')
+    $CFu.classList.add('hidden')
     // status.pagination.push(
     //     {
     //         action: 'modalGalery',
@@ -85,6 +90,7 @@ export const contactForm = (data)=>{
     $CF.classList.remove('hidden')
     // $IP.classList.add('hidden')
     $arrow.classList.remove('hidden')
+    $CFu.classList.add('hidden')
     $menu.classList.add('hidden')
     
     printContactForm(data)
@@ -95,6 +101,7 @@ export const inkers = ()=>{
     $LP.classList.add('hidden')
     $G.classList.add('hidden')
     $GI.classList.remove('hidden')
+    $CFu.classList.add('hidden')
     $IP.classList.add('hidden')
     status.pagination.push(
         {
@@ -114,16 +121,19 @@ export const inkersProfile = (e)=>{
     $LP.classList.add('hidden')
     $MG.classList.add('hidden')
     $CF.classList.add('hidden')
+    $CFu.classList.add('hidden')
     $GI.classList.add('hidden')
+    window.scrollTo(0,0)
     status.pagination.push(
         {
             action: 'inkersProfile',
             dat: e,
-            scroll : scrolling
+            scroll : 0
         }
     )
     $arrow.classList.add('hidden')
     $menu.classList.remove('hidden')
     
     printInkerProfile(e)
+    window.scrollTo(0,0)
 }

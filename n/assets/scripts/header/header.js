@@ -1,4 +1,5 @@
 import { galery, initial, inkers } from '../router/router.js'
+import { status } from '../state.js'
 
 export const header = ()=>{
     // NAV VISIBILITY
@@ -19,7 +20,11 @@ export const header = ()=>{
     })
     const $navMobileContentGalery = document.querySelector('.tatuajes')
     $navMobileContentGalery.addEventListener('click',()=>{
-        galery()        
+        
+        galery()  
+        window.scrollTo(0,0)  
+        status.scrollPatch = 0    
+       
         $navMobileContent.classList.add('hidden')
     })
     const $navMobileContentInkers = document.querySelector('.tatuadores')
@@ -29,7 +34,8 @@ export const header = ()=>{
     })
     const $LPverTatuajes = document.querySelector('.landingPage_estilos__verTatuajes')
     $LPverTatuajes.addEventListener('click',()=>{
-        galery()        
+        galery()   
+        window.scrollTo(0,0)         
         $navMobileContent.classList.add('hidden')
     })
     const $LPverTatuadores = document.querySelector('.landingPage_tatuadores__verTatuajes')

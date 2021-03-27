@@ -10,7 +10,7 @@ export const printGaleryTags = ()=>{
    
     const $container = document.querySelector('.galery_header__tags')
     $container.innerHTML = ''
-    let regex = `/${status.param}/gi`
+    let regex = `/^${status.param}/gi`
 
     status.tags.forEach(e => {
         
